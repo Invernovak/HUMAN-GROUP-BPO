@@ -2,7 +2,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     const sections = [
         { id: 'hero-container', file: 'sections/hero.html' },
         { id: 'about-container', file: 'sections/about.html' },
-        { id: 'who-we-are-container', file: 'sections/who-we-are.html' }
+        { id: 'who-we-are-container', file: 'sections/who-we-are.html' },
+        { id: 'services-container', file: 'sections/services.html' },
+        { id: 'testimonials-container', file: 'sections/testimonials.html' }
     ];
 
     for (const section of sections) {

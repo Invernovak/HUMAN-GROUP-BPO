@@ -229,11 +229,20 @@
 
 .hero-subtitle {
     font-size: 1.1rem;
-    max-width: 400px;
+    max-width: 450px;
     margin-bottom: 2.5rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.9);
-    /* Semi-transparent white */
+    line-height: 1.6;
+    color: #ffffff;
+    /* White text for contrast */
+    background: linear-gradient(135deg, rgba(125, 183, 83, 0.95), rgba(125, 183, 83, 0.75));
+    /* Corporate Green Gradient */
+    padding: 20px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: inline-block;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    /* Soft shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 /* Modern Hero CTA */
@@ -317,12 +326,7 @@
     font-family: var(--font-heading);
 }
 
-.hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 3rem;
-    max-width: 500px;
-    opacity: 0.9;
-}
+
 
 .hero-actions {
     display: flex;

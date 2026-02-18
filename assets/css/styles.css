@@ -20,6 +20,11 @@
     --card-border: rgba(255, 255, 255, 0.1);
     --border-radius-lg: 24px;
     --border-radius-md: 16px;
+    --border-radius-sm: 8px;
+
+    /* Shadows */
+    --box-shadow-card: 0 20px 40px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.2);
 
     /* Typography */
     --font-heading: 'Outfit', sans-serif;
@@ -235,7 +240,7 @@ ul {
     /* Ensure visibility of dark logo on dark background */
     background-color: #ffffff;
     padding: 5px 15px;
-    border-radius: 12px;
+    border-radius: var(--border-radius-sm);
 }
 
 .logo-icon {
@@ -374,7 +379,7 @@ ul {
     background: white;
     display: inline-flex;
     align-items: center;
-    border-radius: 12px;
+    border-radius: var(--border-radius-sm);
     padding: 0;
     overflow: hidden;
     height: 55px;
@@ -534,7 +539,7 @@ ul {
 .bento-card:hover {
     transform: translateY(-8px);
     border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow-card);
 }
 
 /* Accent Borders/Glows for cards */
@@ -658,7 +663,7 @@ ul {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--card-border);
     padding: 15px;
-    border-radius: 12px;
+    border-radius: var(--border-radius-sm);
     color: white;
     font-family: var(--font-body);
 }

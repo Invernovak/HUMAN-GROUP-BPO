@@ -65,6 +65,18 @@ document.addEventListener('DOMContentLoaded', function () {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
+
+                    // Handle staggered children if present
+                    const staggeredChildren = entry.target.querySelectorAll('[class*="stagger-"]');
+                    if (staggeredChildren.length > 0) {
+                        staggeredChildren.forEach((child, index) => {
+                            // If it doesn't have a specific delay class, we could auto-assign one, 
+                            // but for now we trust the CSS classes or manual setup.
+                            // Ensure the parent's visibility triggers children animations
+                            child.style.animationPlayState = 'running';
+                        });
+                    }
+
                     observer.unobserve(entry.target); // Only animate once
                 }
             });

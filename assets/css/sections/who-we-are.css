@@ -20,7 +20,7 @@
     right: 50px;
     width: 300px;
     height: 300px;
-    background-image: url('../images/Isotipo.png');
+    background-image: url('../../images/Isotipo.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top right;
@@ -147,7 +147,7 @@
 /* Button White Pill */
 .btn-pill-white {
     background: white;
-    color: #032221;
+    color: var(--color-accent-lime);
     padding: 12px 28px;
     border-radius: 50px;
     font-weight: 700;
