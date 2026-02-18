@@ -1,0 +1,228 @@
+/* Who We Are Specific Styles */
+
+/* --- Who We Are Section (Dark Theme) --- */
+.bg-dark-theme {
+    background-color: #559fc9;
+    /* Sky Blue Background per request */
+    color: white;
+    padding: 4rem;
+    border-radius: 40px;
+}
+
+.position-relative {
+    position: relative;
+}
+
+/* Decorative Pattern (Top Right) */
+.decorative-pattern {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 300px;
+    height: 300px;
+    background-image: url('../images/Isotipo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    opacity: 0.15;
+    /* Subtle watermark effect */
+    pointer-events: none;
+    z-index: 0;
+}
+
+#who-we-are .container {
+    position: relative;
+    z-index: 2;
+}
+
+.light-pill {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.dot-yellow {
+    width: 6px;
+    height: 6px;
+    background-color: #efcb4f;
+    border-radius: 50%;
+}
+
+/* Grid Layout */
+.who-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Image Column */
+.image-wrapper-rounded {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 450px;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Experience Badge */
+.experience-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--color-bg-dark);
+    /* Navy for contrast against sky blue background */
+    padding: 20px 25px;
+    border-top-right-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 10px -10px 0 0 transparent;
+    /* Clean cut look */
+}
+
+.exp-number {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #efcb4f;
+}
+
+.exp-text {
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color: white;
+}
+
+/* Text Content */
+.description-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    opacity: 0.85;
+}
+
+.mission-vision-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mv-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    align-items: center;
+    text-align: left;
+}
+
+.mv-title {
+    background-color: white;
+    color: #efcb4f;
+    /* Yellow text on white bubble */
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 12px 24px;
+    border-radius: 50px;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.mv-desc {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.separator-line {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+/* Button White Pill */
+.btn-pill-white {
+    background: white;
+    color: #032221;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s;
+}
+
+.btn-pill-white:hover {
+    background: #efcb4f;
+    color: #032221;
+    transform: translateY(-3px);
+}
+
+.btn-icon-sq {
+    background: #efcb4f;
+    color: #032221;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .who-content-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .image-wrapper-rounded {
+        height: 350px;
+    }
+
+    .mv-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
+
+/* --- Scroll Animations --- */
+.animate-on-scroll {
+    /* opacity: 0;  <-- Removed to prevent invisible content if JS fails */
+    transform: translateY(30px);
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger different directions if needed */
+.animate-from-left {
+    transform: translateX(-50px);
+}
+
+.animate-from-right {
+    transform: translateX(50px);
+}
+
+.animate-scale-up {
+    transform: scale(0.9);
+}
+
+.animate-on-scroll.is-visible.animate-from-left,
+.animate-on-scroll.is-visible.animate-from-right {
+    transform: translateX(0);
+}
+
+.animate-on-scroll.is-visible.animate-scale-up {
+    transform: scale(1);
+}

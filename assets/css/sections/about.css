@@ -1,0 +1,148 @@
+/* Mission/About Section Base */
+#about {
+    font-family: var(--font-body);
+}
+
+.mission-header-layout {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: flex-start;
+}
+
+.mission-badge-col {
+    flex: 0 0 auto;
+}
+
+.mission-content-col {
+    flex: 1;
+}
+
+/* Badge Pill (Small 'Sobre Nosotros' button) */
+.badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: transparent;
+    border: 1px solid #c2c2c2;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dot-green {
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-accent-lime);
+    border-radius: 50%;
+}
+
+/* Text */
+.mission-title {
+    font-size: 3rem;
+    /* Large heading */
+    color: var(--color-bg-darker);
+    /* Navy */
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+.mission-text {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 900px;
+}
+
+/* Cards Grid */
+.mission-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 3rem;
+}
+
+/* Individual Card */
+.mission-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Vertically center content */
+    min-height: 140px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.mission-card h3 {
+    font-size: 1.4rem;
+    color: var(--color-bg-darker);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    flex: 1;
+    /* Take available space */
+}
+
+/* Icon Box Style */
+.icon-box-outline {
+    font-size: 2rem;
+    color: var(--color-accent-lime);
+    /* Brand Green */
+    flex: 0 0 auto;
+    /* Fixed width */
+    margin-left: 15px;
+    /* Space between text and icon */
+    background: transparent;
+    border: 2px solid #e0f2f1;
+    /* Light green border? Or just icon */
+    border-radius: 12px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Icon inside box */
+}
+
+/* Make icon box simpler to match image: Just greenish icon, maybe thin circle/box */
+.icon-box-outline {
+    border: 1px solid var(--color-accent-lime);
+    color: var(--color-accent-lime);
+    border-radius: 12px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+    transition: all 0.3s;
+}
+
+.mission-card:hover .icon-box-outline {
+    background: var(--color-accent-lime);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .mission-header-layout {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .mission-title {
+        font-size: 2.2rem;
+    }
+}
