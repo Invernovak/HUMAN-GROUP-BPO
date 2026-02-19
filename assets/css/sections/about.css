@@ -1,6 +1,11 @@
 /* Mission/About Section Base */
+.section-light-bg {
+    background-color: #F9F9F9;
+}
+
 #about {
     font-family: var(--font-body);
+    padding: 50px 0 100px 0;
 }
 
 .mission-header-layout {
@@ -18,20 +23,21 @@
     flex: 1;
 }
 
-/* Badge Pill (Small 'Sobre Nosotros' button) */
+/* Badge Pill */
 .badge-pill {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 8px 18px;
-    background: transparent;
-    border: 1px solid #c2c2c2;
+    background: white;
+    border: 1px solid #e0e0e0;
     border-radius: 50px;
     font-size: 0.75rem;
     font-weight: 700;
     color: #444;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
 }
 
 .dot-green {
@@ -41,108 +47,184 @@
     border-radius: 50%;
 }
 
-/* Text */
+/* Text Header */
 .mission-title {
-    font-size: 3rem;
-    /* Large heading */
+    font-size: clamp(2rem, 5vw, 3rem);
     color: var(--color-bg-darker);
-    /* Navy */
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
     font-family: var(--font-heading);
 }
 
 .mission-text {
-    color: #555;
+    color: #666;
     font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: 1.7;
     max-width: 900px;
 }
 
-/* Cards Grid */
-.mission-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 24px;
-    margin-top: 3rem;
+/* Premium Slider Styles */
+.mission-slider-container {
+    margin-top: 4rem;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
 
-/* Individual Card */
-.mission-card {
-    background: white;
-    padding: 2.5rem 2rem;
-    border-radius: 24px;
+.swiper {
+    width: 100%;
+    height: 500px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Vertically center content */
-    min-height: 140px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-    /* Subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.03);
-}
-
-.mission-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.mission-card h3 {
-    font-size: 1.4rem;
-    color: var(--color-bg-darker);
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0;
-    flex: 1;
-    /* Take available space */
-}
-
-/* Icon Box Style */
-.icon-box-outline {
-    font-size: 2rem;
-    color: var(--color-accent-lime);
-    /* Brand Green */
-    flex: 0 0 auto;
-    /* Fixed width */
-    margin-left: 15px;
-    /* Space between text and icon */
-    background: transparent;
-    border: 2px solid #e0f2f1;
-    /* Light green border? Or just icon */
-    border-radius: 12px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Icon inside box */
-}
-
-/* Make icon box simpler to match image: Just greenish icon, maybe thin circle/box */
-.icon-box-outline {
-    border: 1px solid var(--color-accent-lime);
-    color: var(--color-accent-lime);
-    border-radius: 12px;
-    width: 50px;
-    height: 50px;
-    font-size: 1.4rem;
-    transition: all 0.3s;
-}
-
-.mission-card:hover .icon-box-outline {
-    background: var(--color-accent-lime);
+    align-items: flex-end;
+    padding: 60px;
     color: white;
 }
 
+.slide-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.slide-content h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    color: white;
+}
+
+.slide-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Swiper Navigation & Pagination */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+/* Premium Cards Grid */
+.mission-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 4rem;
+}
+
+/* Individual Premium Card */
+.mission-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    height: 100%;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(125, 183, 83, 0.08);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-lime);
+    font-size: 1.5rem;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 1024px) {
+    .mission-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+    #about {
+        padding: 60px 0;
+    }
+
     .mission-header-layout {
         flex-direction: column;
         gap: 1.5rem;
+        text-align: center;
+        align-items: center;
     }
 
     .mission-title {
         font-size: 2.2rem;
+    }
+
+    .mission-cards-grid {
+        gap: 20px;
+    }
+
+    .swiper {
+        height: 400px;
+    }
+
+    .swiper-slide {
+        padding: 40px 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .slide-content h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        padding: 40px 0;
+    }
+
+    .mission-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-card {
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .swiper {
+        height: 450px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .slide-content h3 {
+        font-size: 1.5rem;
     }
 }

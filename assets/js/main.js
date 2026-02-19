@@ -31,6 +31,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.initializeMobileMenu();
 
+    // --- Swiper Slider Initialization ---
+    window.initializeSlider = function () {
+        if (typeof Swiper !== 'undefined') {
+            const swiper = new Swiper('.servicesSlider', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                speed: 1000,
+            });
+        }
+    };
+
+    window.initializeSlider();
+
     // Close menu when clicking a link
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {

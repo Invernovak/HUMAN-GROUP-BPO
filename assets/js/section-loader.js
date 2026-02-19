@@ -38,4 +38,8 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (window.initializeMobileMenu) {
         window.initializeMobileMenu();
     }
+
+    if (window.initializeSlider) {
+        window.initializeSlider();
+    }
 });

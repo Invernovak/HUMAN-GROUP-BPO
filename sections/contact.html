@@ -1,56 +1,86 @@
-<section id="contact-split" class="section-padding">
+<section id="contact-premium" class="section-padding bg-light">
     <div class="container">
-        <div class="contact-split-wrapper">
-            <!-- Left Card: Promo / Why Choose Us -->
-            <div class="contact-promo-card animate-on-scroll animate-from-left">
-                <div class="promo-badge">
-                    <span class="dot-green"></span> ¿POR QUÉ ELEGIRNOS?
+        <div class="contact-premium-wrapper">
+            <!-- Left Column: Branding & Info -->
+            <div class="contact-info-col animate-on-scroll animate-from-left">
+                <div class="badge-pill mb-20">
+                    <span class="dot-green"></span> HABLEMOS DE SU FUTURO
                 </div>
-                <h2 class="promo-title">
-                    Únase a más de 500<br>empresas<br>que confían en nosotros
+                <h2 class="contact-main-title">
+                    ¿Listo para optimizar su <span class="text-gradient">talento humano?</span>
                 </h2>
+                <p class="contact-subtitle">
+                    Estamos aquí para transformar la gestión de su empresa. Contáctenos hoy mismo y descubra cómo
+                    podemos potenciar su equipo.
+                </p>
 
-                <div class="promo-image-container">
-                    <img src="assets/images/Woman-laptop.png" alt="Asesora Human Group" class="promo-img">
-                </div>
-
-                <a href="#" class="btn btn-white-outline">
-                    Empezar <span class="arrow-box">↗</span>
-                </a>
-            </div>
-
-            <!-- Right Card: Dark Form -->
-            <div class="contact-form-card animate-on-scroll animate-from-right">
-                <h3 class="form-title">Obtenga consultoría gratuita</h3>
-
-                <form class="consultation-form">
-                    <div class="form-row">
-                        <input type="text" placeholder="Su nombre" class="form-input" required>
-                        <input type="email" placeholder="Su dirección de correo electrónico" class="form-input"
-                            required>
-                    </div>
-
-                    <div class="form-row">
-                        <input type="tel" placeholder="Número de teléfono" class="form-input" required>
-                        <div class="select-wrapper">
-                            <select class="form-select">
-                                <option value="" disabled selected>Seleccionar servicios</option>
-                                <option value="nomina">Gestión de Nómina</option>
-                                <option value="seleccion">Selección de Personal</option>
-                                <option value="sst">Seguridad y Salud (SST)</option>
-                                <option value="consultoria">Consultoría HR</option>
-                            </select>
+                <div class="contact-methods">
+                    <div class="contact-method-item">
+                        <div class="method-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="method-text">
+                            <span>Email Corporativo</span>
+                            <strong>info@humangroupbpo.com</strong>
                         </div>
                     </div>
 
-                    <div class="form-row message-row">
-                        <input type="text" placeholder="Su dirección de correo electrónico (Confirmación)"
-                            class="form-input">
-                        <button type="submit" class="btn btn-submit-white">
-                            Enviar mensaje <span class="arrow-icon">↗</span>
-                        </button>
+                    <div class="contact-method-item">
+                        <div class="method-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="method-text">
+                            <span>Teléfono</span>
+                            <strong>+57 300 123 4567</strong>
+                        </div>
                     </div>
-                </form>
+
+                    <div class="contact-method-item">
+                        <div class="method-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="method-text">
+                            <span>Sede Cali, Colombia</span>
+                            <strong>Calle 5 # 38 - 14, Edificio Imbanaco</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Lead Capture Form -->
+            <div class="contact-form-col animate-on-scroll animate-from-right">
+                <div class="form-premium-card">
+                    <h3 class="form-card-title">Envíe su solicitud</h3>
+                    <p class="form-card-subtitle">Complete el formulario y un consultor experto lo contactará en menos
+                        de 24 horas.</p>
+
+                    <form class="cro-contact-form">
+                        <div class="form-group">
+                            <label for="full-name">Nombre Completo</label>
+                            <input type="text" id="full-name" placeholder="Ej: Juan Pérez" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="corp-email">Correo Corporativo</label>
+                            <input type="email" id="corp-email" placeholder="juan.perez@empresa.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Empresa</label>
+                            <input type="text" id="company" placeholder="Nombre de su organización" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service-interest">¿En qué servicio está interesado?</label>
+                            <textarea id="service-interest" placeholder="Describa brevemente su requerimiento..."
+                                rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit-cro">
+                            Enviar Solicitud de Consultoría <i class="fas fa-paper-plane ml-10"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

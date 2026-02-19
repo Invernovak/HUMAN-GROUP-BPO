@@ -1,229 +1,236 @@
-/* Who We Are Specific Styles */
-
-/* --- Who We Are Section (Dark Theme) --- */
-.bg-dark-theme {
-    background-color: #559fc9;
-    /* Sky Blue Background per request */
-    color: white;
-    padding: 4rem;
-    border-radius: 40px;
+/* Who We Are - Premium Redesign */
+.who-section {
+    background-color: #ffffff;
+    padding: 50px 0 100px 0;
+    /* Reduced top padding */
 }
 
-.position-relative {
+.who-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    /* Reduced gap */
+    align-items: center;
+}
+
+/* Image Styling */
+.who-image-container {
     position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    max-height: 480px;
+    /* Limited height to reduce scroll */
 }
 
-/* Decorative Pattern (Top Right) */
-.decorative-pattern {
+.who-img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.who-image-container:hover .who-img {
+    transform: scale(1.05);
+}
+
+.who-exp-float {
     position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 300px;
-    height: 300px;
-    background-image: url('../../images/Isotipo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top right;
-    opacity: 0.15;
-    /* Subtle watermark effect */
-    pointer-events: none;
-    z-index: 0;
-}
-
-#who-we-are .container {
-    position: relative;
+    bottom: 20px;
+    /* Tighter position */
+    right: 20px;
+    background: var(--color-accent-lime);
+    color: white;
+    padding: 15px 25px;
+    /* Compact padding */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(125, 183, 83, 0.3);
     z-index: 2;
 }
 
-.light-pill {
-    border-color: rgba(255, 255, 255, 0.5);
-    color: white;
-}
-
-.dot-yellow {
-    width: 6px;
-    height: 6px;
-    background-color: #efcb4f;
-    border-radius: 50%;
-}
-
-/* Grid Layout */
-.who-content-grid {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 4rem;
-    align-items: center;
-    margin-top: 2rem;
-}
-
-/* Image Column */
-.image-wrapper-rounded {
-    position: relative;
-    border-radius: 30px;
-    overflow: hidden;
-    height: 450px;
-}
-
-.img-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Experience Badge */
-.experience-badge {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: var(--color-bg-dark);
-    /* Navy for contrast against sky blue background */
-    padding: 20px 25px;
-    border-top-right-radius: 30px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    box-shadow: 10px -10px 0 0 transparent;
-    /* Clean cut look */
-}
-
-.exp-number {
-    font-size: 4rem;
+.who-exp-num {
+    font-size: 2rem;
+    /* Slightly smaller */
     font-weight: 800;
     line-height: 1;
-    color: #efcb4f;
 }
 
-.exp-text {
+.who-exp-num sup {
     font-size: 1rem;
-    line-height: 1.2;
+    top: -0.5em;
+}
+
+.who-exp-lbl {
+    font-size: 0.75rem;
     font-weight: 600;
-    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 3px;
 }
 
-/* Text Content */
-.description-text {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 3rem;
-    opacity: 0.85;
-}
-
-.mission-vision-row {
+/* Content Styling */
+.who-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 15px;
+    /* Reduced gap */
 }
 
-.mv-item {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 30px;
-    align-items: center;
-    text-align: left;
-}
-
-.mv-title {
-    background-color: white;
-    color: #efcb4f;
-    /* Yellow text on white bubble */
-    font-size: 1rem;
+.who-title {
+    font-size: 38px;
+    /* Fixed compact size for desktop */
     font-weight: 800;
-    padding: 12px 24px;
-    border-radius: 50px;
-    width: fit-content;
-    white-space: nowrap;
+    color: var(--color-bg-darker);
+    line-height: 1.1;
+    margin: 10px 0;
 }
 
-.mv-desc {
-    font-size: 1rem;
-    opacity: 0.9;
+.who-description {
+    font-size: 16px;
+    /* Standard reading size */
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 5px;
 }
 
-.separator-line {
-    height: 1px;
-    background: rgba(255, 255, 255, 0.1);
-    width: 100%;
+/* Mission & Vision Blocks */
+.mission-vision-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Tighter gap */
 }
 
-/* Button White Pill */
-.btn-pill-white {
-    background: white;
-    color: var(--color-accent-lime);
-    padding: 12px 28px;
-    border-radius: 50px;
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    transition: all 0.3s;
+.mv-block {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    padding: 18px 22px;
+    /* More compact padding */
+    border-radius: 12px;
+    display: flex;
+    gap: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
 }
 
-.btn-pill-white:hover {
-    background: #efcb4f;
-    color: #032221;
-    transform: translateY(-3px);
+.mv-block:hover {
+    transform: translateX(8px);
+    border-color: var(--color-accent-orange);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.btn-icon-sq {
-    background: #efcb4f;
-    color: #032221;
-    width: 24px;
-    height: 24px;
+.mv-icon-wrap {
+    width: 44px;
+    height: 44px;
+    background: rgba(231, 152, 60, 0.1);
+    color: var(--color-accent-orange);
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.mv-block:hover .mv-icon-wrap {
+    background: var(--color-accent-orange);
+    color: white;
+}
+
+.mv-text h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-bg-darker);
+    margin-bottom: 4px;
+}
+
+.mv-text p {
+    font-size: 15px;
+    /* Refined compact size */
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* CTA */
+.who-cta {
+    margin-top: 10px;
+}
+
+.btn-icon-sq {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
+    margin-left: 10px;
+    font-size: 0.8rem;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .who-content-grid {
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .who-grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .who-section {
+        padding: 60px 0;
+    }
+
+    .who-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 40px;
     }
 
-    .image-wrapper-rounded {
-        height: 350px;
+    .who-image-wrap {
+        order: 1;
     }
 
-    .mv-item {
-        grid-template-columns: 1fr;
-        gap: 5px;
+    .who-content {
+        order: 2;
+        text-align: center;
+        align-items: center;
+    }
+
+    .who-title {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    .who-cta {
+        display: flex;
+        justify-content: center;
     }
 }
 
-/* --- Scroll Animations --- */
-.animate-on-scroll {
-    /* opacity: 0;  <-- Removed to prevent invisible content if JS fails */
-    transform: translateY(30px);
-    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-    will-change: transform;
-}
+@media (max-width: 480px) {
+    .who-section {
+        padding: 40px 0;
+    }
 
-.animate-on-scroll.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+    .who-exp-float {
+        padding: 10px 15px;
+        bottom: 15px;
+        right: 15px;
+    }
 
-/* Stagger different directions if needed */
-.animate-from-left {
-    transform: translateX(-50px);
-}
+    .who-exp-num {
+        font-size: 1.5rem;
+    }
 
-.animate-from-right {
-    transform: translateX(50px);
-}
-
-.animate-scale-up {
-    transform: scale(0.9);
-}
-
-.animate-on-scroll.is-visible.animate-from-left,
-.animate-on-scroll.is-visible.animate-from-right {
-    transform: translateX(0);
-}
-
-.animate-on-scroll.is-visible.animate-scale-up {
-    transform: scale(1);
+    .mv-block {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
 }

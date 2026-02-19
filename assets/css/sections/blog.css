@@ -92,14 +92,20 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .blog-articles-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .blog-articles-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .article-img-wrapper {
+        height: 200px;
     }
 }

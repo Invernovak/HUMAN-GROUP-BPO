@@ -1,15 +1,13 @@
-/* Process Section Styles */
+/* Process Section Styles - Premium Redesign */
 .process-section {
     padding: 100px 0;
-    background-color: #f9fafc;
-    /* Slightly off-white to differentiate */
+    background-color: #ffffff;
     overflow: hidden;
-    text-align: left;
 }
 
 /* --- Header & Title --- */
 .process-header {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     text-align: left;
 }
 
@@ -18,128 +16,115 @@
     align-items: center;
     gap: 10px;
     background: #ffffff;
-    color: #666;
-    padding: 10px 25px;
+    color: #333;
+    padding: 8px 18px;
     border-radius: 50px;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
     border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
 }
 
 .process-label::before {
     content: '';
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     background-color: var(--color-accent-lime);
     border-radius: 50%;
-    display: inline-block;
 }
 
 .process-title {
-    font-size: 4rem;
-    line-height: 1;
-    color: #1a2042;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    color: #111;
     font-weight: 800;
-    margin-top: 0;
+    margin: 0;
 }
 
 /* --- Steps Grid --- */
 .process-steps-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 30px;
 }
 
 .process-step {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-    padding: 20px;
-    border-radius: 16px;
-    transition: transform 0.3s ease;
+    position: relative;
+    background-color: #FAFAFA;
+    padding: 50px 30px;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    overflow: hidden;
 }
 
 .process-step:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    background-color: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.08);
 }
 
-.step-icon-box {
-    width: 80px;
-    height: 80px;
-    background-color: var(--color-accent-lime);
-    /* Green */
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 2rem;
-    box-shadow: 0 10px 20px rgba(125, 183, 83, 0.3);
-    /* Green shadow */
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
+.step-number-watermark {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #000;
+    opacity: 0.03;
+    line-height: 1;
+    user-select: none;
+    transition: opacity 0.3s ease;
 }
 
-.process-step:hover .step-icon-box {
-    transform: scale(1.1);
+.process-step:hover .step-number-watermark {
+    opacity: 0.05;
+}
+
+.step-content {
+    position: relative;
+    z-index: 2;
 }
 
 .step-title {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #1a2042;
-    margin: 0;
+    color: #111;
+    margin-bottom: 15px;
 }
 
 .step-desc {
-    font-size: 0.95rem;
-    color: #666;
+    font-size: 1rem;
+    color: #555;
     line-height: 1.6;
     margin: 0;
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+    .process-section {
+        padding: 60px 0;
+    }
+
     .process-steps-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
-    }
-
-    .process-title {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .process-steps-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .process-header {
-        margin-bottom: 3rem;
-    }
-
-    .process-title {
-        font-size: 2.5rem;
+        /* 2x2 grid */
+        gap: 25px;
     }
 }
 
 @media (max-width: 480px) {
-    .process-title {
-        font-size: 2rem;
-    }
-
     .process-steps-grid {
-        gap: 2rem;
+        grid-template-columns: 1fr;
+        /* 1 column stack */
+        gap: 20px;
     }
 
-    .process-step {
-        padding: 15px;
+    .process-header {
+        margin-bottom: 2.5rem;
     }
 }

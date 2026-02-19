@@ -48,8 +48,11 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 body {
@@ -60,17 +63,21 @@ body {
 }
 
 h1,
+.hero-title {
+    font-family: var(--font-heading);
+    color: var(--color-bg-dark);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    font-size: clamp(2.5rem, 8vw, 6.5rem);
+}
+
 h2,
-h3,
-h4,
-.hero-title,
 .section-title {
     font-family: var(--font-heading);
     color: var(--color-bg-dark);
-    /* Corporate Navy for headings */
     font-weight: 800;
-    /* Extra Bold */
     letter-spacing: -0.01em;
+    font-size: clamp(2rem, 5vw, 4rem);
 }
 
 a {
@@ -81,6 +88,7 @@ a {
 
 img {
     max-width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -89,9 +97,10 @@ ul {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .text-center {
@@ -99,7 +108,7 @@ ul {
 }
 
 .section-padding {
-    padding: var(--spacing-lg) 0;
+    padding: clamp(3rem, 10vw, 6rem) 0;
 }
 
 .bg-darker {
@@ -163,7 +172,8 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping */
+    flex-wrap: wrap;
+    /* Allow wrapping */
 }
 
 @media (max-width: 600px) {
@@ -799,14 +809,29 @@ ul {
 
     .contact-split {
         grid-template-columns: 1fr;
-        gap: 2rem; /* Reduced gap */
+        gap: 2rem;
+        /* Reduced gap */
     }
 
-    h1 { font-size: 2.5rem; }
-    .section-title { font-size: 2rem; }
-    .nav-pill { display: none; } /* Hide desktop nav pill on mobile */
-    .header-right { display: none; } /* Hide desktop header right on mobile */
-    
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .nav-pill {
+        display: none;
+    }
+
+    /* Hide desktop nav pill on mobile */
+    .header-right {
+        display: none;
+    }
+
+    /* Hide desktop header right on mobile */
+
     /* Ensure containers have padding */
     .container {
         width: 100%;
@@ -815,6 +840,11 @@ ul {
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 2rem; }
-    .section-title { font-size: 1.75rem; }
+    h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
 }

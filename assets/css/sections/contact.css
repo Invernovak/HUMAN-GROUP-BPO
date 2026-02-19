@@ -1,205 +1,253 @@
-/* Contact Section Styles */
+/* Contact Premium & CRO Section */
 
-.contact-split-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    /* Promo card smaller, Form wider */
-    gap: 30px;
-    align-items: stretch;
-}
-
-/* --- Left Promo Card --- */
-.contact-promo-card {
-    background-color: #f9f9f9;
-    /* Off-white as in image */
-    border-radius: 30px;
-    padding: 3rem;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 500px;
-}
-
-.promo-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: white;
-    padding: 8px 16px;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #333;
-    border: 1px solid #eee;
-    margin-bottom: 1.5rem;
-    width: fit-content;
-}
-
-.dot-green {
-    width: 6px;
-    height: 6px;
-    background-color: #00d084;
-    /* Bright Green */
-    border-radius: 50%;
-}
-
-.promo-title {
-    font-size: 2.5rem;
-    line-height: 1.1;
-    color: #1a2042;
-    /* Dark Navy form styles */
-    margin-bottom: 2rem;
-    font-weight: 800;
-    max-width: 90%;
-    z-index: 2;
-}
-
-.promo-image-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 60%;
-    height: 70%;
-    z-index: 1;
-}
-
-.promo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: bottom right;
-}
-
-.btn-white-outline {
-    background: white;
-    border: 1px solid #ddd;
-    padding: 10px 20px;
-    /* Smaller button */
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    color: #333;
-    width: fit-content;
-    z-index: 2;
-    margin-top: auto;
-    /* Push to bottom if space allows */
-}
-
-.arrow-box {
-    background: #00faac;
-    /* Neon Green */
-    color: white;
-    /* Or dark depending on contrast */
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-}
-
-/* --- Right Form Card --- */
-.contact-form-card {
-    background-color: #032221;
-    /* Very Dark Green/Black */
-    border-radius: 30px;
-    padding: 3.5rem;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.form-title {
-    font-size: 1.5rem;
-    margin-bottom: 2.5rem;
-    font-weight: 700;
-}
-
-.consultation-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.form-row {
+.contact-premium-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    gap: 80px;
+    align-items: center;
 }
 
-.form-input,
-.form-select {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 15px;
-    border-radius: 8px;
-    color: white;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    width: 100%;
-    outline: none;
-    transition: border-color 0.3s;
+/* --- Left Column: Info --- */
+.contact-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-.form-input::placeholder {
-    color: rgba(255, 255, 255, 0.4);
+.contact-main-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--color-bg-darker);
+    margin: 0;
 }
 
-.form-input:focus,
-.form-select:focus {
-    border-color: #00faac;
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 500px;
 }
 
-.select-wrapper {
-    position: relative;
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
 }
 
-.form-select {
-    appearance: none;
-    cursor: pointer;
+.contact-method-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
-/* Custom dropdown arrow if needed, usually browser default is okay or hidden */
-
-.btn-submit-white {
-    background: white;
-    color: #032221;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 50px;
-    /* Pill shape */
-    font-weight: 700;
-    cursor: pointer;
-    display: inline-flex;
+.method-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(125, 183, 83, 0.1);
+    /* Light green tint */
+    color: var(--color-accent-lime);
+    border-radius: 12px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    transition: transform 0.2s;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.method-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.method-text span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #999;
+}
+
+.method-text strong {
+    font-size: 1.1rem;
+    color: var(--color-bg-darker);
+    font-weight: 700;
+}
+
+/* --- Right Column: Form Card --- */
+.form-premium-card {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05);
+    /* Soft premium shadow */
+    border: 1px solid #f0f0f0;
+}
+
+.form-card-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-bg-darker);
+    margin-bottom: 10px;
+}
+
+.form-card-subtitle {
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 35px;
+    line-height: 1.5;
+}
+
+.cro-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-bg-darker);
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
+    min-height: 48px;
+    /* Touch target minimum */
+    padding: 12px 18px;
+    border: 1.5px solid #eee;
+    border-radius: 10px;
+    background-color: #fcfcfc;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+    outline: none;
 }
 
-.btn-submit-white:hover {
-    transform: translateY(-2px);
+.form-group textarea {
+    resize: none;
+    padding-top: 15px;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .contact-split-wrapper {
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-accent-lime);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(125, 183, 83, 0.05);
+}
+
+.btn-submit-cro {
+    width: 100%;
+    height: 60px;
+    /* Large clickable area */
+    background-color: #FF6600;
+    /* Solid Corporate Orange */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-top: 10px;
+    box-shadow: 0 10px 20px rgba(255, 102, 0, 0.2);
+}
+
+.btn-submit-cro:hover {
+    background-color: #e55c00;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 102, 0, 0.3);
+}
+
+.btn-submit-cro:active {
+    transform: translateY(-1px);
+}
+
+/* --- Utilities --- */
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+.text-gradient {
+    color: var(--color-accent-orange);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .contact-premium-wrapper {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-premium-wrapper {
         grid-template-columns: 1fr;
+        gap: 60px;
     }
 
-    .promo-image-container {
-        position: relative;
-        width: 100%;
-        height: 300px;
+    .contact-info-col {
+        text-align: center;
+        align-items: center;
     }
 
-    .form-row {
-        grid-template-columns: 1fr;
+    .contact-subtitle {
+        margin: 0 auto;
+    }
+
+    .contact-method-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .form-premium-card {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .form-premium-card {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .contact-main-title {
+        font-size: 1.8rem;
+    }
+
+    .form-card-title {
+        font-size: 1.5rem;
+    }
+
+    .btn-submit-cro {
+        font-size: 1rem;
+        padding: 0 15px;
     }
 }

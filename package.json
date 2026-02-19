@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,9 +16,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/sebastiandindustrial-debug/HUMAN-GROUP-BPO/issues"
   },
-  "homepage": "https://github.com/sebastiandindustrial-debug/HUMAN-GROUP-BPO#readme"
+  "homepage": "https://github.com/sebastiandindustrial-debug/HUMAN-GROUP-BPO#readme",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
 }
