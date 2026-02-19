@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         { id: 'process-container', file: 'sections/process.html' },
         { id: 'contact-container', file: 'sections/contact.html' },
         { id: 'blog-container', file: 'sections/blog.html' },
-        { id: 'testimonials-container', file: 'sections/testimonials.html' }
+        { id: 'testimonials-container', file: 'sections/testimonials.html' },
+        { id: 'footer-container', file: 'sections/footer.html' }
     ];
 
     for (const section of sections) {

@@ -1,0 +1,239 @@
+/* Footer Section Styles - Orange Theme */
+
+.new-footer {
+    background-color: #021a1e;
+    /* Deep dark teal/black background */
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+.new-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Top Bar --- */
+.footer-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #00faac;
+    /* Keeping the brand green for the logo icon only? Or change to orange? User said "color naranjan". Let's stick to brand green for logo to not break identity, but orange for accents. */
+    /* Wait, user said "same structure but with orange color". I will make the Logo Icon Orange to match the request exactly. */
+    background-color: #ff6b00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social-circle {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #021a1e;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-circle:hover {
+    background-color: #ff6b00;
+    /* Orange Hover */
+    color: white;
+    transform: translateY(-3px);
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 3rem;
+    margin-top: 0;
+}
+
+/* --- Main Grid --- */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 4rem;
+}
+
+.footer-heading {
+    color: #00faac;
+    /* Keep some brand identity? Or all orange? "color narajan". Let's make headings Orange too for consistency with the request "with the orange color". */
+    color: #ff6b00;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-text {
+    color: #a0aec0;
+    line-height: 1.6;
+}
+
+.footer-contact-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-contact-list a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.3s;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-contact-list a:hover {
+    color: #ff6b00;
+    border-bottom-color: #ff6b00;
+}
+
+.phone-highlight {
+    font-weight: 700;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links-list a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: padding-left 0.3s, color 0.3s;
+}
+
+.footer-links-list a:hover {
+    color: #ff6b00;
+    padding-left: 5px;
+}
+
+/* Subscribe Form */
+.footer-subscribe-form .input-group {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    /* Very light dark bg */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.footer-subscribe-form input {
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    width: 100%;
+    outline: none;
+}
+
+.footer-subscribe-form input::placeholder {
+    color: #718096;
+}
+
+.btn-orange {
+    background-color: #ff6b00;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-orange:hover {
+    background-color: #e65100;
+    /* Darker orange */
+}
+
+/* --- Bottom Bar --- */
+.footer-bottom-bar {
+    background-color: white;
+    color: #333;
+    border-radius: 8px;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.footer-legal-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.footer-legal-links a:hover {
+    color: #ff6b00;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-top-bar {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-bottom-bar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
