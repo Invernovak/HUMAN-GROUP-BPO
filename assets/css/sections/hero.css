@@ -374,12 +374,55 @@
     animation: marquee 20s linear infinite;
 }
 
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
+
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+        letter-spacing: -1px;
     }
 
-    100% {
-        transform: translateX(-50%);
+    .hero-subtitle {
+        font-size: 1rem;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .hero-content-section {
+        padding: 0 20px;
+        bottom: 60px;
+    }
+
+    .logo-group {
+        padding: 8px 15px;
+        gap: 10px;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .logo-group img {
+        height: 50px;
+    }
+
+    /* Stack actions */
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-separator {
+        margin-bottom: 1rem;
     }
 }

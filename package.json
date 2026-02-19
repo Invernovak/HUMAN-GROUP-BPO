@@ -1,0 +1,21 @@
+{
+  "name": "human-group-bpo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastiandindustrial-debug/HUMAN-GROUP-BPO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sebastiandindustrial-debug/HUMAN-GROUP-BPO/issues"
+  },
+  "homepage": "https://github.com/sebastiandindustrial-debug/HUMAN-GROUP-BPO#readme"
+}

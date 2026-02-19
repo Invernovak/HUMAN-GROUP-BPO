@@ -227,3 +227,28 @@
         font-size: 4rem;
     }
 }
+
+@media (max-width: 480px) {
+    .stats-panel-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .stat-number-huge {
+        font-size: 3rem;
+    }
+
+    .services-title {
+        font-size: 2.5rem;
+    }
+
+    .service-item-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .service-link-icon {
+        align-self: flex-end;
+    }
+}
