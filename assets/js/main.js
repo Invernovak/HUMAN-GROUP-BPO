@@ -93,4 +93,70 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Call initially in case static content exists
     window.initializeObservers();
+
+    // --- Testimonials Logic ---
+    const testimonialsData = [
+        {
+            title: "Altamente profesional.",
+            text: "Somos una firma de capital de crecimiento que impulsa a una nueva generación de visionarios extraordinarios. Impulsamos marcas y soluciones tecnológicas que hacen nuestras vidas más saludables, felices y cómodas.",
+            name: "Martín Bailey",
+            role: "DIRECTOR DE FINANZAS",
+            image: "assets/images/testimonial-profile.jpg"
+        },
+        {
+            title: "Eficiencia comprobada.",
+            text: "Human Group BPO ha transformado nuestra gestión de talento. Su capacidad para encontrar los perfiles adecuados en tiempo récord ha sido fundamental para nuestro crecimiento.",
+            name: "Laura Gómez",
+            role: "GERENTE DE RRHH",
+            image: "assets/images/testimonial-profile.jpg"
+        },
+        {
+            title: "Socios estratégicos.",
+            text: "Más que un proveedor, son un aliado en nuestra estrategia corporativa. La gestión de nómina es impecable y nos permite enfocarnos en nuestro core business.",
+            name: "Carlos Rodríguez",
+            role: "CEO - TECH SOLUTIONS",
+            image: "assets/images/testimonial-profile.jpg"
+        }
+    ];
+
+    let currentTestimonialIndex = 0;
+
+    window.changeTestimonial = function (direction) {
+        currentTestimonialIndex += direction;
+
+        if (currentTestimonialIndex >= testimonialsData.length) {
+            currentTestimonialIndex = 0;
+        } else if (currentTestimonialIndex < 0) {
+            currentTestimonialIndex = testimonialsData.length - 1;
+        }
+
+        const data = testimonialsData[currentTestimonialIndex];
+        const slide = document.getElementById('testimonial-active');
+
+        if (!slide) return;
+
+        // Simple fade out/in effect
+        slide.style.opacity = '0';
+        slide.style.transform = 'translateX(20px)';
+
+        setTimeout(() => {
+            const heading = slide.querySelector('.testimonial-heading');
+            const text = slide.querySelector('.testimonial-text');
+            const name = slide.querySelector('.user-name');
+            const role = slide.querySelector('.user-role');
+            const img = slide.querySelector('.user-avatar img');
+
+            if (heading) heading.textContent = data.title;
+            if (text) text.textContent = data.text;
+            if (name) name.textContent = data.name;
+            if (role) role.textContent = data.role;
+            if (img) img.src = data.image;
+
+            slide.style.opacity = '1';
+            slide.style.transform = 'translateX(0)';
+        }, 300);
+    };
+
+    // Optional: Auto-rotate
+    // setInterval(() => window.changeTestimonial(1), 5000);
 });

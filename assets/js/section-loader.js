@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', async function () {
         { id: 'about-container', file: 'sections/about.html' },
         { id: 'who-we-are-container', file: 'sections/who-we-are.html' },
         { id: 'services-container', file: 'sections/services.html' },
+        { id: 'process-container', file: 'sections/process.html' },
+        { id: 'contact-container', file: 'sections/contact.html' },
+        { id: 'blog-container', file: 'sections/blog.html' },
         { id: 'testimonials-container', file: 'sections/testimonials.html' }
     ];
 
