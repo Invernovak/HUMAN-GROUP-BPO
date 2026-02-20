@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Especializados | Human Group BPO</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Page Specific Styles -->
+    <link rel="stylesheet" href="assets/css/pages/servicios-page.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Simple Internal Header (Hardcoded for stability) -->
+    <header class="internal-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-group">
+                    <img src="assets/images/logo-horizontal.png" alt="Human Group BPO" style="max-height: 45px;">
+                </div>
+            </a>
+            <nav class="nav-pill">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="index.html#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="index.html#contact" class="btn-contact-header">Cotizar Ahora ↗</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="services-page-main section-padding">
+        <div class="container">
+            <div class="services-tabs-layout">
+
+                <!-- Sidebar: Vertical Tabs Menu -->
+                <aside class="services-sidebar">
+                    <div class="sidebar-sticky">
+                        <h3 class="sidebar-title">Nuestras Soluciones</h3>
+                        <div class="tabs-nav" id="tabs-nav">
+                            <button class="tab-trigger active" data-target="nomina">
+                                <i class="fas fa-file-invoice-dollar"></i> Gestión de Nómina
+                            </button>
+                            <button class="tab-trigger" data-target="seleccion">
+                                <i class="fas fa-user-check"></i> Selección de Personal
+                            </button>
+                            <button class="tab-trigger" data-target="capacitacion">
+                                <i class="fas fa-graduation-cap"></i> Capacitación y Desarrollo
+                            </button>
+                            <button class="tab-trigger" data-target="clima">
+                                <i class="fas fa-heart"></i> Clima y Bienestar
+                            </button>
+                            <button class="tab-trigger" data-target="gestion">
+                                <i class="fas fa-gavel"></i> Gestión Admin/Legal
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Content Panels -->
+                <div class="services-panels-wrapper" id="panels-container">
+
+                    <!-- Panel 1: Nómina -->
+                    <div class="tab-panel active" id="nomina">
+                        <div class="panel-header">
+                            <span class="badge-pill mb-15">Efectividad Operativa</span>
+                            <h2 class="panel-title">Gestión de Nómina y <span class="text-gradient">Seguridad
+                                    Social</span></h2>
+                            <p class="panel-description">
+                                Optimizamos sus procesos administrativos eliminando riesgos de multas y sobrecostos.
+                                Nuestra gestión permite que su empresa se enfoque en su núcleo de negocio mientras
+                                nosotros garantizamos precisión absoluta en cada liquidación.
+                            </p>
+                        </div>
+
+                        <div class="sub-services-grid">
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Liquidación de nómina técnica
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Gestión de Seguridad Social (PILA)
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Administración de incapacidades
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Emisión de certificados laborales
+                            </div>
+                        </div>
+
+                        <div class="panel-cta">
+                            <a href="index.html#contact" class="btn-panel-cta">Solicitar Cotización de este
+                                Servicio</a>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Selección -->
+                    <div class="tab-panel" id="seleccion">
+                        <div class="panel-header">
+                            <span class="badge-pill mb-15">Talento de Alto Perfil</span>
+                            <h2 class="panel-title">Atracción de Talento de <span class="text-gradient">Alto
+                                    Impacto</span></h2>
+                            <p class="panel-description">
+                                Encontramos el ADN que tu empresa necesita. Reducimos la rotación mediante procesos de
+                                filtrado rigurosos y pruebas psicotécnicas de última generación.
+                            </p>
+                        </div>
+
+                        <div class="sub-services-grid">
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Búsqueda y Headhunting
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Pruebas Psicotécnicas
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Verificación de Referencias
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Entrevistas por Competencias
+                            </div>
+                        </div>
+
+                        <div class="panel-cta">
+                            <a href="index.html#contact" class="btn-panel-cta">Solicitar Cotización de este
+                                Servicio</a>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Capacitación -->
+                    <div class="tab-panel" id="capacitacion">
+                        <div class="panel-header">
+                            <span class="badge-pill mb-15">Crecimiento Continuo</span>
+                            <h2 class="panel-title">Potenciamos el <span class="text-gradient">Capital Humano</span>
+                            </h2>
+                            <p class="panel-description">
+                                El crecimiento de tu empresa depende del crecimiento de tu gente. Diseñamos planes de
+                                formación a medida que cierran brechas de habilidades y aumentan la eficiencia.
+                            </p>
+                        </div>
+
+                        <div class="sub-services-grid">
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Inducción Organizacional
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Formación en Habilidades Blandas
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Capacitación Técnica
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Seguimiento de Curva de Aprendizaje
+                            </div>
+                        </div>
+
+                        <div class="panel-cta">
+                            <a href="index.html#contact" class="btn-panel-cta">Solicitar Cotización de este
+                                Servicio</a>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4: Clima -->
+                    <div class="tab-panel" id="clima">
+                        <div class="panel-header">
+                            <span class="badge-pill mb-15">Bienestar Laboral</span>
+                            <h2 class="panel-title">Culturas Organizacionales <span
+                                    class="text-gradient">Saludables</span></h2>
+                            <p class="panel-description">
+                                Un empleado feliz es un empleado productivo. Medimos y mejoramos el ambiente laboral
+                                para fortalecer el sentido de pertenencia y el compromiso.
+                            </p>
+                        </div>
+
+                        <div class="sub-services-grid">
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Medición de Clima Laboral
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Planes de Bienestar Social
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Evaluación de Desempeño
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Gestión de Cambio Organizacional
+                            </div>
+                        </div>
+
+                        <div class="panel-cta">
+                            <a href="index.html#contact" class="btn-panel-cta">Solicitar Cotización de este
+                                Servicio</a>
+                        </div>
+                    </div>
+
+                    <!-- Panel 5: Gestión -->
+                    <div class="tab-panel" id="gestion">
+                        <div class="panel-header">
+                            <span class="badge-pill mb-15">Blindaje Normativo</span>
+                            <h2 class="panel-title">Blindaje Jurídico y <span
+                                    class="text-gradient">Administrativo</span></h2>
+                            <p class="panel-description">
+                                Nos encargamos de la complejidad documental para que tú te enfocares en el negocio.
+                                Garantizamos el cumplimiento de la normativa laboral vigente.
+                            </p>
+                        </div>
+
+                        <div class="sub-services-grid">
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Elaboración de Contratos y Reglamentos
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Procesos Disciplinarios
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Gestión de Archivo Laboral
+                            </div>
+                            <div class="sub-service-item">
+                                <i class="fas fa-check-circle"></i> Certificaciones y Trámites
+                            </div>
+                        </div>
+
+                        <div class="panel-cta">
+                            <a href="index.html#contact" class="btn-panel-cta">Solicitar Cotización de este
+                                Servicio</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer injected here or simplified for this page -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/pages/servicios.js"></script>
+    <script>
+        // Simple script to inject footer if needed, or hardcode it for better build stability
+        fetch('sections/footer.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            });
+    </script>
+</body>
+
+</html>
