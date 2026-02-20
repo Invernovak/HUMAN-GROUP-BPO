@@ -1,13 +1,15 @@
 /* Process Section Styles - Premium Redesign */
 .process-section {
-    padding: 100px 0;
-    background-color: #ffffff;
+    padding: 70px 0;
+    /* Reduced by 30% from 100px */
+    background-color: transparent;
     overflow: hidden;
 }
 
 /* --- Header & Title --- */
 .process-header {
-    margin-bottom: 4rem;
+    margin-bottom: 2.8rem;
+    /* Reduced by 30% from 4rem */
     text-align: left;
 }
 
@@ -62,9 +64,9 @@
 }
 
 .process-step:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     background-color: #ffffff;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
     border-color: rgba(0, 0, 0, 0.08);
 }
 

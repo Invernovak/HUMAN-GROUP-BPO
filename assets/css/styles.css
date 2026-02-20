@@ -108,8 +108,34 @@ ul {
 }
 
 .section-padding {
-    padding: clamp(3rem, 10vw, 6rem) 0;
+    padding: clamp(2rem, 7vw, 4.2rem) 0;
+    /* Reduced by 30% from 3rem-6rem to ~2rem-4.2rem */
 }
+
+/* Contrast Block Utilities */
+.section-white {
+    background-color: #ffffff;
+}
+
+.section-gray {
+    background-color: #f8f9fa;
+}
+
+.section-corporate {
+    background-color: var(--color-bg-darker);
+    color: white;
+}
+
+.section-corporate h2 {
+    color: white;
+}
+
+.section-corporate .badge-pill {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
 
 .bg-darker {
     background-color: var(--color-bg-darker);
@@ -129,8 +155,28 @@ ul {
     font-size: 0.9rem;
     cursor: pointer;
     border: 2px solid transparent;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
 }
+
+/* Energized Button Glow Effect */
+.btn-primary::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: all 0.6s ease;
+}
+
+.btn-primary:hover::after {
+    left: 120%;
+}
+
 
 .btn-primary {
     background-color: var(--color-accent-lime);
@@ -582,6 +628,26 @@ ul {
 .color-accent-4:hover {
     border-color: var(--color-accent-orange);
 }
+
+/* Glassmorphism Global Utility */
+.glass-container {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+/* Tactile Micro-interactions */
+.hover-lift {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12) !important;
+}
+
 
 .card-icon {
     font-size: 3rem;
