@@ -33,12 +33,59 @@
 }
 
 /* Layout */
+.services-page-main {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at top right, rgba(125, 183, 83, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at bottom left, rgba(255, 102, 0, 0.03) 0%, transparent 40%);
+}
+
+/* Atmospheric Layering (Geometric Shapes) */
+.services-page-main::before,
+.services-page-main::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+}
+
+.services-page-main::before {
+    width: 400px;
+    height: 400px;
+    background: var(--color-accent-lime);
+    top: -100px;
+    right: -100px;
+}
+
+.services-page-main::after {
+    width: 300px;
+    height: 300px;
+    background: var(--color-accent-orange);
+    bottom: 10%;
+    left: -50px;
+}
+
 .services-tabs-layout {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 60px;
-    margin-top: 40px;
+    margin-top: 20px;
     align-items: start;
+    position: relative;
+}
+
+/* Texture Overlay */
+.services-tabs-layout::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(#ccc 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* Sidebar */
@@ -133,20 +180,65 @@
 }
 
 .panel-title {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 800;
     color: var(--color-bg-darker);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     line-height: 1.1;
     font-family: var(--font-heading);
+    letter-spacing: -1px;
 }
 
 .panel-description {
-    font-size: 1.15rem;
-    color: #666;
+    font-size: 1.1rem;
+    color: #2d2d2d;
+    /* Darker for readability */
     line-height: 1.7;
+    margin-bottom: 30px;
+    max-width: 750px;
+}
+
+/* New: Direct Benefits Section */
+.panel-benefits-box {
+    background: rgba(125, 183, 83, 0.05);
+    /* Very light green tint */
+    border-radius: 20px;
+    padding: 30px;
     margin-bottom: 40px;
-    max-width: 700px;
+    border: 1px dashed rgba(125, 183, 83, 0.3);
+}
+
+.benefits-title {
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--color-accent-lime);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.benefit-pill {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.benefit-pill i {
+    color: var(--color-accent-orange);
+    font-size: 1.2rem;
+}
+
+.benefit-pill span {
+    font-weight: 700;
+    color: var(--color-bg-darker);
+    font-size: 0.95rem;
 }
 
 .sub-services-grid {
@@ -174,17 +266,26 @@
 }
 
 /* CTA */
+.panel-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 .btn-panel-cta {
-    display: inline-block;
-    padding: 18px 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    padding: 22px 50px;
     background-color: #FF6600;
     /* Corporate Orange */
     color: white;
     font-weight: 800;
-    font-size: 1.1rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(255, 102, 0, 0.2);
-    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(255, 102, 0, 0.25);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btn-panel-cta:hover {
@@ -222,18 +323,30 @@
         gap: 30px;
     }
 
+    /* Mobile Menu: Fixed Navigation on Scroll */
     .services-sidebar {
-        position: relative;
-        top: 0;
+        position: sticky;
+        top: 75px;
+        /* Just below header */
+        z-index: 900;
+        background: #f8f9fa;
+        padding: 10px 0;
+        margin: -10px 0 20px 0;
     }
 
-    /* Mobile Menu: Horizontal Pills */
+    .sidebar-title {
+        display: none;
+        /* Hide title on mobile to save vertical space */
+    }
+
     .tabs-nav {
         flex-direction: row;
         overflow-x: auto;
-        padding-bottom: 15px;
+        padding-bottom: 5px;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
+        justify-content: flex-start;
+        padding: 0 15px;
     }
 
     .tabs-nav::-webkit-scrollbar {
@@ -242,17 +355,31 @@
 
     .tab-trigger {
         flex: 0 0 auto;
-        padding: 12px 20px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
         white-space: nowrap;
+        border-radius: 50px;
+        /* Pill shape for mobile */
+    }
+
+    .benefits-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .services-panels-wrapper {
-        padding: 40px 25px;
+        padding: 40px 20px;
         border-radius: 20px;
+        margin-top: 0;
     }
 
     .panel-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .panel-description {
+        text-align: center;
     }
 
     .sub-services-grid {
@@ -262,7 +389,7 @@
 
 @media (max-width: 480px) {
     .section-padding {
-        padding: 40px 0;
+        padding: 30px 0;
     }
 
     .panel-title {
