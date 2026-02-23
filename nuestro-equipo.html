@@ -26,53 +26,146 @@
     <link rel="stylesheet" href="assets/css/animations.css">
 
     <style>
-        .internal-hero {
-            padding: 160px 0 80px;
-            background: var(--color-bg-darker);
-            color: white;
+        /* Team Section Styles */
+        .team-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .team-intro {
+            max-width: 800px;
+            margin: 0 auto 60px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
-        .internal-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('assets/images/services-corporate.jpg') center/cover;
-            opacity: 0.15;
-            z-index: 0;
-        }
-
-        .internal-hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .internal-hero h1 {
-            font-size: 3.5rem;
-            font-family: var(--font-heading);
+        .team-intro .badge-pill {
             margin-bottom: 20px;
         }
 
-        .breadcrumb {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
+        .team-intro h2 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+        }
+
+        .team-intro p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .team-card {
+            background: #f9fafb;
+            border-radius: 32px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .team-card:hover {
+            transform: translateY(-15px);
+            background: white;
+            box-shadow: 0 30px 60px rgba(39, 47, 97, 0.1);
+        }
+
+        .member-photo-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .member-mask {
+            width: 100%;
+            height: 100%;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            overflow: hidden;
+            background: #eee;
+            transition: all 0.6s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-card:hover .member-mask {
+            border-radius: 50%;
+            transform: scale(1.05);
+        }
+
+        .member-mask img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .member-info h3 {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+            color: var(--human-navy);
+        }
+
+        .member-role {
             font-size: 0.9rem;
-            opacity: 0.8;
+            font-weight: 700;
+            color: var(--human-green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: block;
         }
 
-        .breadcrumb a {
-            color: white;
-            text-decoration: none;
+        .member-motto {
+            font-style: italic;
+            color: #888;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            position: relative;
+            padding: 0 20px;
         }
 
-        .breadcrumb span {
-            color: var(--color-accent-lime);
+        .member-motto::before,
+        .member-motto::after {
+            content: '"';
+            font-size: 1.5rem;
+            color: var(--human-green);
+            opacity: 0.4;
+            position: absolute;
+        }
+
+        .member-motto::before {
+            left: 0;
+            top: -5px;
+        }
+
+        .member-motto::after {
+            right: 0;
+            bottom: -15px;
+        }
+
+        .member-bio {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .team-intro h2 {
+                font-size: 2.2rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -120,8 +213,69 @@
         </div>
     </section>
 
-    <!-- Content Area -->
-    <div id="about-container"></div>
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="team-intro animate-on-scroll">
+                <span class="badge-pill"><span class="dot-green"></span> EL CORAZÓN DE NUESTRA GESTIÓN</span>
+                <h2>Seres humanos impulsando propósitos corporativos</h2>
+                <p>En Human Group BPO, creemos que detrás de cada proceso exitoso hay una historia, una pasión y un
+                    compromiso inquebrantable. Conócenos no solo por lo que hacemos, sino por quiénes somos.</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Member 1: Paola Andrea García -->
+                <div class="team-card animate-on-scroll">
+                    <div class="member-photo-container">
+                        <div class="member-mask">
+                            <img src="assets/images/paola-garcia-founder.jpg" alt="Paola Andrea García">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <span class="member-role">Fundadora & CEO</span>
+                        <h3>Paola Andrea García</h3>
+                        <p class="member-motto">La verdadera gestión comienza con la empatía y se consolida con el
+                            cumplimiento.</p>
+                        <p class="member-bio">Líder visionaria con más de 7 años transformando el BPO en soluciones
+                            humanas integrales.</p>
+                    </div>
+                </div>
+
+                <!-- Member 2: Placeholder for Manager -->
+                <div class="team-card animate-on-scroll delay-1">
+                    <div class="member-photo-container">
+                        <div class="member-mask">
+                            <img src="assets/images/placeholder-team-1.jpg" alt="Director de Operaciones">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <span class="member-role">Dirección Operativa</span>
+                        <h3>Excelencia en Procesos</h3>
+                        <p class="member-motto">Cuidamos los detalles para que tú puedas liderar lo grande.</p>
+                        <p class="member-bio">Expertos en garantizar que cada engranaje de nómina y SST funcione con
+                            precisión suiza.</p>
+                    </div>
+                </div>
+
+                <!-- Member 3: Placeholder for Talento -->
+                <div class="team-card animate-on-scroll delay-2">
+                    <div class="member-photo-container">
+                        <div class="member-mask">
+                            <img src="assets/images/placeholder-team-2.jpg" alt="Líder de Talento Humano">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <span class="member-role">Gestión de Talento</span>
+                        <h3>Pasión por las Personas</h3>
+                        <p class="member-motto">No buscamos perfiles, conectamos propósitos de vida con metas
+                            empresariales.</p>
+                        <p class="member-bio">Enfocados en atraer y retener al capital humano que define la cultura de
+                            tu éxito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer Container -->
     <div id="footer-container"></div>

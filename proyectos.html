@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos & Sectores | Human Group BPO</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/pages/proyectos.css">
+    <link rel="stylesheet" href="assets/css/sections/navbar.css">
+    <link rel="stylesheet" href="assets/css/sections/footer.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <style>
+        .internal-hero {
+            padding: 160px 0 80px;
+            background: var(--color-bg-darker);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .internal-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/images/services-corporate.jpg') center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .internal-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .internal-hero h1 {
+            font-size: 3.5rem;
+            font-family: var(--font-heading);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            color: var(--color-accent-lime);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-group">
+                <div class="contact-item"><i class="fas fa-map-marker-alt icon-teal"></i><span>Bogotá, Colombia</span>
+                </div>
+                <div class="contact-item"><i class="fas fa-envelope icon-teal"></i><span>info@humangroupbpo.com</span>
+                </div>
+                <div class="contact-item"><i class="fas fa-phone-alt icon-teal"></i><span>+57 300 123 4567</span></div>
+            </div>
+            <div class="social-group">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Internal Hero -->
+    <section class="internal-hero">
+        <div class="container">
+            <h1>Nuestros Proyectos</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span>/</span>
+                <span>Proyectos & Sectores</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <main class="projects-page-main section-padding">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="filter-bar animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+                <button class="filter-btn" data-filter="comercial">Comercial</button>
+                <button class="filter-btn" data-filter="logistica">Logística</button>
+                <button class="filter-btn" data-filter="salud">Salud</button>
+                <button class="filter-btn" data-filter="servicios">Servicios</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project 1: Industrial -->
+                <div class="project-card animate-on-scroll" data-category="industrial">
+                    <div class="project-image">
+                        <img src="assets/images/project-industrial.jpg" alt="Optimización de Planta">
+                        <span class="sector-badge">Industrial</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="service-tag">Gestión SST & Nómina</span>
+                        <h3>Optimización de Planta Automotriz</h3>
+                        <p class="human-story">"Logramos reducir la accidentalidad un 40% empoderando al equipo de
+                            planta."</p>
+                        <p class="project-meta">Ubicación: Medellín, CO | Impacto: +500 empleados</p>
+                    </div>
+                </div>
+
+                <!-- Project 2: Comercial -->
+                <div class="project-card animate-on-scroll" data-category="comercial">
+                    <div class="project-image">
+                        <img src="assets/images/project-retail.jpg" alt="Retail Excellence">
+                        <span class="sector-badge">Comercial</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="service-tag">Selección de Personal</span>
+                        <h3>Retail Excellence: Expansión Nacional</h3>
+                        <p class="human-story">"Conectamos a 200 jóvenes con su primer empleo formal en el sector
+                            retail."</p>
+                        <p class="project-meta">Ubicación: Nivel Nacional | Impacto: 15 ciudades</p>
+                    </div>
+                </div>
+
+                <!-- Project 3: Logística -->
+                <div class="project-card animate-on-scroll" data-category="logistica">
+                    <div class="project-image">
+                        <img src="assets/images/project-logistics.jpg" alt="Gestión de Cedi">
+                        <span class="sector-badge">Logística</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="service-tag">Operación Integral</span>
+                        <h3>Eficiencia en Centros de Distribución</h3>
+                        <p class="human-story">"Transformamos el caos operativo en una logística fluida centrada en el
+                            bienestar."</p>
+                        <p class="project-meta">Ubicación: Valle del Cauca | Impacto: Cero errores en nómina por 24
+                            meses</p>
+                    </div>
+                </div>
+
+                <!-- Project 4: Salud -->
+                <div class="project-card animate-on-scroll" data-category="salud">
+                    <div class="project-image">
+                        <img src="assets/images/project-health.jpg" alt="Servicios Médicos">
+                        <span class="sector-badge">Salud</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="service-tag">Administración de RR.HH.</span>
+                        <h3>Gestión de Talento Humano Clínico</h3>
+                        <p class="human-story">"Cuidamos a los que cuidan: implementamos planes de bienestar para
+                            personal médico."</p>
+                        <p class="project-meta">Ubicación: Bogotá | Impacto: Mejora del 30% en clima laboral</p>
+                    </div>
+                </div>
+
+                <!-- Project 5: Servicios -->
+                <div class="project-card animate-on-scroll" data-category="servicios">
+                    <div class="project-image">
+                        <img src="assets/images/project-services.jpg" alt="Consultoría">
+                        <span class="sector-badge">Servicios</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="service-tag">BPO Administrativo</span>
+                        <h3>Transformación Digital H2H</h3>
+                        <p class="human-story">"Migramos una operación de 300 personas a la nube sin perder el toque
+                            humano."</p>
+                        <p class="project-meta">Ubicación: Remoto/Híbrido | Impacto: 100% visibilidad en gestión</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/section-loader.js"></script>
+    <script src="assets/js/pages/proyectos.js"></script>
+    <script>
+        // Shared sections are loaded by section-loader.js automatically if we define the containers
+        // but here we manually trigger to be safe on internal pages
+        document.addEventListener('DOMContentLoaded', () => {
+            // section-loader logic is already global, but let's ensure it runs for these specific IDs
+            if (window.initializeObservers) window.initializeObservers();
+        });
+    </script>
+</body>
+
+</html>
