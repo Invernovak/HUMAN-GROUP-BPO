@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function () {
     const sections = [
+        { id: 'navbar-container', file: 'sections/navbar.html' },
         { id: 'hero-container', file: 'sections/hero.html' },
         { id: 'about-container', file: 'sections/about.html' },
         { id: 'who-we-are-container', file: 'sections/who-we-are.html' },
@@ -35,8 +36,8 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     // Re-attach scroll listeners or mobile menu logic if those elements are part of fetched content
-    if (window.initializeMobileMenu) {
-        window.initializeMobileMenu();
+    if (window.initializeNavbar) {
+        window.initializeNavbar();
     }
 
     if (window.initializeSlider) {

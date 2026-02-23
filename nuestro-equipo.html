@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Equipo | Human Group BPO</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/sections/about.css">
+    <link rel="stylesheet" href="assets/css/sections/navbar.css">
+    <link rel="stylesheet" href="assets/css/sections/footer.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <style>
+        .internal-hero {
+            padding: 160px 0 80px;
+            background: var(--color-bg-darker);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .internal-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/images/services-corporate.jpg') center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .internal-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .internal-hero h1 {
+            font-size: 3.5rem;
+            font-family: var(--font-heading);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            color: var(--color-accent-lime);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-group">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt icon-teal"></i>
+                    <span>Bogotá, Colombia</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope icon-teal"></i>
+                    <span>info@humangroupbpo.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt icon-teal"></i>
+                    <span>+57 300 123 4567</span>
+                </div>
+            </div>
+            <div class="social-group">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Internal Hero -->
+    <section class="internal-hero">
+        <div class="container">
+            <h1>Nuestro Equipo</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span>/</span>
+                <span>Sobre Nosotros</span>
+                <span>/</span>
+                <span>Nuestro Equipo</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Area -->
+    <div id="about-container"></div>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Inject shared sections
+        const sections = [
+            { id: 'navbar-container', file: 'sections/navbar.html' },
+            { id: 'about-container', file: 'sections/about.html' },
+            { id: 'footer-container', file: 'sections/footer.html' }
+        ];
+
+        async function loadSections() {
+            for (const section of sections) {
+                try {
+                    const response = await fetch(section.file);
+                    if (response.ok) {
+                        const html = await response.text();
+                        document.getElementById(section.id).innerHTML = html;
+
+                        // Specialized initializations
+                        if (section.id === 'navbar-container' && window.initializeNavbar) {
+                            window.initializeNavbar();
+                        }
+                        if (section.id === 'about-container' && window.initializeSlider) {
+                            window.initializeSlider();
+                        }
+                    }
+                } catch (e) { console.error(e); }
+            }
+        }
+
+        loadSections();
+    </script>
+</body>
+
+</html>

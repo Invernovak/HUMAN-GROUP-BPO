@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Membresías | Human Group BPO</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/sections/navbar.css">
+    <link rel="stylesheet" href="assets/css/sections/footer.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <style>
+        .internal-hero {
+            padding: 160px 0 80px;
+            background: var(--color-bg-darker);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .internal-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/images/hero.jpg') center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .internal-hero h1 {
+            font-size: 3.5rem;
+            font-family: var(--font-heading);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            color: var(--color-accent-lime);
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 100px 0;
+            background: var(--color-bg-light);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border: 2px solid var(--color-accent-lime);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--color-text-dark);
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--color-accent-lime);
+            margin: 20px 0;
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            font-weight: 400;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            margin-bottom: 15px;
+            color: var(--color-text-medium);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-features i {
+            color: var(--color-accent-lime);
+        }
+
+        .btn-pricing {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            background: var(--color-bg-darker);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .featured .btn-pricing {
+            background: var(--color-accent-lime);
+            color: var(--color-bg-darker);
+        }
+
+        .btn-pricing:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 992px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-group">
+                <div class="contact-item"><i class="fas fa-map-marker-alt icon-teal"></i><span>Bogotá, Colombia</span>
+                </div>
+                <div class="contact-item"><i class="fas fa-envelope icon-teal"></i><span>info@humangroupbpo.com</span>
+                </div>
+                <div class="contact-item"><i class="fas fa-phone-alt icon-teal"></i><span>+57 300 123 4567</span></div>
+            </div>
+            <div class="social-group">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Internal Hero -->
+    <section class="internal-hero">
+        <div class="container">
+            <h1>Plan de Membresías</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span>/</span>
+                <span>Plan de Membresías</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="badge-pill"><span class="dot-green"></span> INVIRTIZA EN SU EQUIPO</span>
+                <h2 class="section-title mt-3">Planes diseñados para cada etapa <br> de su empresa</h2>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Basic -->
+                <div class="pricing-card animate-on-scroll animate-from-up stagger-1">
+                    <h3 class="pricing-title">Esencial</h3>
+                    <p class="text-muted">Para pequeñas empresas en crecimiento.</p>
+                    <div class="pricing-price">$000<span>/mes</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Gestión de Nómina (hasta 10 emp.)</li>
+                        <li><i class="fas fa-check"></i> Seguridad Social Integral</li>
+                        <li><i class="fas fa-check"></i> Soporte vía Email</li>
+                        <li><i class="fas fa-check"></i> Certificados Laborales Online</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-pricing">Empezar Ahora</a>
+                </div>
+
+                <!-- Featured -->
+                <div class="pricing-card featured animate-on-scroll animate-from-up stagger-2">
+                    <h3 class="pricing-title">Corporativo Pro</h3>
+                    <p class="text-muted">La solución ideal para medianas empresas.</p>
+                    <div class="pricing-price">$000<span>/mes</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Todo en el plan Esencial</li>
+                        <li><i class="fas fa-check"></i> Selección de Personal (1 vacante/mes)</li>
+                        <li><i class="fas fa-check"></i> Consultoría Legal Mensual</li>
+                        <li><i class="fas fa-check"></i> Portal del Empleado Premium</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-pricing">Más Popular</a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card animate-on-scroll animate-from-up stagger-3">
+                    <h3 class="pricing-title">Enterprise</h3>
+                    <p class="text-muted">Gestión total para grandes organizaciones.</p>
+                    <div class="pricing-price">Consultar</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Solución BPO Full Outsource</li>
+                        <li><i class="fas fa-check"></i> Headhunting Ilimitado</li>
+                        <li><i class="fas fa-check"></i> Gestión de Clima Laboral</li>
+                        <li><i class="fas fa-check"></i> Account Manager Dedicado</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-pricing">Contactar Ventas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        const sections = [
+            { id: 'navbar-container', file: 'sections/navbar.html' },
+            { id: 'footer-container', file: 'sections/footer.html' }
+        ];
+
+        async function loadSections() {
+            for (const section of sections) {
+                try {
+                    const response = await fetch(section.file);
+                    if (response.ok) {
+                        const html = await response.text();
+                        document.getElementById(section.id).innerHTML = html;
+                        if (section.id === 'navbar-container' && window.initializeNavbar) window.initializeNavbar();
+                    }
+                } catch (e) { console.error(e); }
+            }
+            if (window.initializeObservers) window.initializeObservers();
+        }
+
+        loadSections();
+    </script>
+</body>
+
+</html>

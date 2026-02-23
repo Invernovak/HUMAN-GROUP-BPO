@@ -15,34 +15,95 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Global Styles -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- Page Specific Styles -->
     <link rel="stylesheet" href="assets/css/pages/servicios-page.css">
+    <!-- Navbar Styles -->
+    <link rel="stylesheet" href="assets/css/sections/navbar.css">
+    <link rel="stylesheet" href="assets/css/sections/footer.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <style>
+        .internal-hero {
+            padding: 160px 0 80px;
+            background: var(--color-bg-darker);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .internal-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/images/services-corporate.jpg') center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .internal-hero h1 {
+            font-size: 3.5rem;
+            font-family: var(--font-heading);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            color: var(--color-accent-lime);
+        }
+    </style>
 </head>
 
 <body class="bg-light">
-
-    <!-- Simple Internal Header (Hardcoded for stability) -->
-    <header class="internal-header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <div class="logo-group">
-                    <img src="assets/images/logo-horizontal.png" alt="Human Group BPO" style="max-height: 45px;">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-group">
+                <div class="contact-item"><i class="fas fa-map-marker-alt icon-teal"></i><span>Bogotá, Colombia</span>
                 </div>
-            </a>
-            <nav class="nav-pill">
-                <ul class="nav-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="index.html#contact">Contacto</a></li>
-                </ul>
-            </nav>
-            <div class="header-right">
-                <a href="index.html#contact" class="btn-contact-header">Cotizar Ahora ↗</a>
+                <div class="contact-item"><i class="fas fa-envelope icon-teal"></i><span>info@humangroupbpo.com</span>
+                </div>
+                <div class="contact-item"><i class="fas fa-phone-alt icon-teal"></i><span>+57 300 123 4567</span></div>
+            </div>
+            <div class="social-group">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
-    </header>
+    </div>
+
+    <!-- Premium Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Internal Hero -->
+    <section class="internal-hero">
+        <div class="container">
+            <h1>Nuestros Servicios</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span>/</span>
+                <span>Servicios Especializados</span>
+            </div>
+        </div>
+    </section>
 
     <main class="services-page-main section-padding">
         <div class="container">
@@ -335,14 +396,26 @@
     <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/pages/servicios.js"></script>
     <script>
-        // Simple script to inject footer if needed, or hardcode it for better build stability
-        fetch('sections/footer.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('footer-placeholder').innerHTML = html;
-            });
+        // Inject shared sections
+        const sharedSections = [
+            { id: 'navbar-container', file: 'sections/navbar.html' },
+            { id: 'footer-placeholder', file: 'sections/footer.html' }
+        ];
+
+        sharedSections.forEach(section => {
+            fetch(section.file)
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById(section.id).innerHTML = html;
+                    // Trigger global initializations if they exist
+                    if (section.id === 'navbar-container' && window.initializeNavbar) {
+                        window.initializeNavbar();
+                    }
+                });
+        });
     </script>
 </body>
 

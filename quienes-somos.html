@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos | Human Group BPO</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/sections/navbar.css">
+    <link rel="stylesheet" href="assets/css/sections/footer.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <style>
+        :root {
+            --human-green: #7db753;
+            --human-dark: #1a1a1a;
+        }
+
+        .narrative-hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/human-bg-manifesto.jpg') center/cover;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .narrative-hero h1 {
+            font-size: 3.5rem;
+            font-family: var(--font-heading);
+            max-width: 900px;
+            margin: 0 auto 25px;
+            line-height: 1.1;
+            font-weight: 800;
+        }
+
+        .narrative-hero p {
+            font-size: 1.25rem;
+            max-width: 750px;
+            margin: 0 auto;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        /* History Section */
+        .history-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .history-image img {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 20px 20px 0 var(--human-green);
+        }
+
+        .history-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: var(--human-dark);
+        }
+
+        .history-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 100px 0;
+            background: #f9fafb;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 45px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(125, 183, 83, 0.1);
+            color: var(--human-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Purpose Section */
+        .purpose-section {
+            padding: 100px 0;
+            background: var(--human-dark);
+            color: white;
+        }
+
+        .purpose-flex {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .purpose-box {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 50px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .purpose-box h4 {
+            font-size: 1.8rem;
+            color: var(--human-green);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .purpose-box p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        /* Cierre CTA */
+        .cierre-section {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .cierre-text {
+            font-size: 2.2rem;
+            font-weight: 700;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--human-dark);
+        }
+
+        .btn-bespoke-cta {
+            display: inline-block;
+            padding: 20px 45px;
+            background: var(--human-green);
+            color: white;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 15px 35px rgba(125, 183, 83, 0.3);
+            transition: all 0.3s;
+        }
+
+        .btn-bespoke-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 45px rgba(125, 183, 83, 0.4);
+        }
+
+        @media (max-width: 992px) {
+
+            .history-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .narrative-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .history-image img {
+                box-shadow: 10px 10px 0 var(--human-green);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-group">
+                <div class="contact-item"><i class="fas fa-map-marker-alt icon-teal"></i><span>Bogotá, Colombia</span>
+                </div>
+                <div class="contact-item"><i class="fas fa-envelope icon-teal"></i><span>info@humangroupbpo.com</span>
+                </div>
+                <div class="contact-item"><i class="fas fa-phone-alt icon-teal"></i><span>+57 300 123 4567</span></div>
+            </div>
+            <div class="social-group">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Section 1: El Manifiesto (Hero) -->
+    <header class="narrative-hero">
+        <div class="container animate-on-scroll">
+            <h1>"Creemos que el éxito no son solo números, son personas."</h1>
+            <p>No somos un software, ni un proceso automático. Somos el equipo que cuida a tu equipo. Con más de 7 años
+                de experiencia, transformamos la gestión humana en el motor que impulsa tu tranquilidad.</p>
+        </div>
+    </header>
+
+    <!-- Section 2: Nuestra Historia -->
+    <section class="history-section">
+        <div class="container">
+            <div class="history-grid">
+                <div class="history-image animate-on-scroll animate-from-left">
+                    <img src="assets/images/paola-garcia-founder.jpg"
+                        alt="Paola Andrea García - Fundadora Human Group BPO">
+                </div>
+                <div class="history-content animate-on-scroll animate-from-right">
+                    <span class="badge-pill mb-4"><span class="dot-green"></span> NUESTRA HISTORIA</span>
+                    <h2>De la Idea a la Acción</h2>
+                    <p>Todo empezó con una pregunta simple: ¿Por qué la gestión de personal tiene que ser tan fría y
+                        complicada? Vimos empresas con grandes ideas estancarse por trámites interminables, nóminas mal
+                        liquidadas o procesos de selección que no encajaban con su cultura.</p>
+                    <p>Ahí nació <strong>Human Group BPO</strong>. Liderados por la visión de nuestra fundadora,
+                        <strong>Paola Andrea García</strong>, decidimos que nuestra misión sería devolverle lo "humano"
+                        al mundo corporativo.
+                    </p>
+                    <p>Hoy, 7 años después, hemos dejado de ser un simple proveedor externo para convertirnos en la mano
+                        derecha de empresas que, como la tuya, saben que su gente es su activo más valioso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Lo que nos mueve -->
+    <section class="values-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge-pill"><span class="dot-green"></span> VALORES H2H</span>
+                <h2 class="section-title mt-3">Lo que nos mueve</h2>
+            </div>
+            <div class="values-grid">
+                <!-- Valor 1 -->
+                <div class="value-card animate-on-scroll animate-from-up stagger-1">
+                    <div class="value-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Empatía con Resultados</h3>
+                    <p>Entendemos lo que significa liderar. Por eso, no solo resolvemos problemas, nos anticipamos a
+                        ellos para que tú puedas dormir tranquilo.</p>
+                </div>
+                <!-- Valor 2 -->
+                <div class="value-card animate-on-scroll animate-from-up stagger-2">
+                    <div class="value-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Transparencia sin Letra Menuda</h3>
+                    <p>En un mundo de procesos ocultos, nosotros elegimos la claridad. Desde nuestra plataforma en la
+                        nube hasta el trato directo, siempre sabrás qué está pasando con tu gestión.</p>
+                </div>
+                <!-- Valor 3 -->
+                <div class="value-card animate-on-scroll animate-from-up stagger-3">
+                    <div class="value-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>Pasión por el Detalle</h3>
+                    <p>Sabemos que un error en la nómina o una mala inducción puede arruinar un gran día. Cuidamos cada
+                        detalle porque sabemos que los pequeños engranajes mueven las grandes máquinas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: El Propósito -->
+    <section class="purpose-section">
+        <div class="container">
+            <div class="purpose-flex">
+                <div class="purpose-box animate-scale-up">
+                    <h4>Nuestro día a día</h4>
+                    <p>Documentar, ejecutar y simplificar cada proceso de recursos humanos bajo la normativa actual,
+                        garantizando eficiencia y cercanía en cada contrato, cada pago y cada capacitación.</p>
+                </div>
+                <div class="purpose-box animate-scale-up stagger-1">
+                    <h4>Hacia dónde vamos</h4>
+                    <p>Queremos ser el referente de outsourcing humano en la región, no por ser los más grandes, sino
+                        por ser los más confiables. Queremos que cuando piensen en crecimiento sostenible, piensen en el
+                        respaldo de Human Group.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Cierre -->
+    <section class="cierre-section">
+        <div class="container animate-on-scroll">
+            <p class="cierre-text">"Más de 7 años acompañando historias de éxito empresarial. ¿Escribimos la siguiente
+                juntos?"</p>
+            <a href="index.html#contact" class="btn-bespoke-cta">Conversemos sobre tu equipo</a>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        const sections = [
+            { id: 'navbar-container', file: 'sections/navbar.html' },
+            { id: 'footer-container', file: 'sections/footer.html' }
+        ];
+
+        async function loadSections() {
+            for (const section of sections) {
+                try {
+                    const response = await fetch(section.file);
+                    if (response.ok) {
+                        const html = await response.text();
+                        document.getElementById(section.id).innerHTML = html;
+                        if (section.id === 'navbar-container' && window.initializeNavbar) window.initializeNavbar();
+                    }
+                } catch (e) { console.error(e); }
+            }
+            if (window.initializeObservers) window.initializeObservers();
+        }
+
+        loadSections();
+    </script>
+</body>
+
+</html>
