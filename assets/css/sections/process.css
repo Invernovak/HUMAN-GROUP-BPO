@@ -76,15 +76,37 @@
     right: -10px;
     font-size: 8rem;
     font-weight: 900;
-    color: #000;
-    opacity: 0.03;
+    color: var(--color-bg-darker);
+    opacity: 0.05;
     line-height: 1;
     user-select: none;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Corporate Color Assignments */
+.process-step:nth-child(1) .step-number-watermark {
+    color: var(--color-accent-lime);
+    opacity: 0.08;
+}
+
+.process-step:nth-child(2) .step-number-watermark {
+    color: var(--color-accent-purple);
+    opacity: 0.08;
+}
+
+.process-step:nth-child(3) .step-number-watermark {
+    color: var(--color-accent-yellow);
+    opacity: 0.08;
+}
+
+.process-step:nth-child(4) .step-number-watermark {
+    color: var(--color-accent-orange);
+    opacity: 0.08;
 }
 
 .process-step:hover .step-number-watermark {
-    opacity: 0.05;
+    opacity: 0.15;
+    transform: scale(1.1);
 }
 
 .step-content {

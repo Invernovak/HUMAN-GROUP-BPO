@@ -44,6 +44,18 @@
     transition: all 0.3s ease;
 }
 
+/* Internal Page Variant: Clear visibility on light backgrounds */
+.hero-header.header-internal .nav-pill-main {
+    background: var(--human-navy);
+    border-color: var(--human-navy);
+    box-shadow: 0 10px 30px rgba(39, 47, 97, 0.2);
+}
+
+.hero-header.header-internal .nav-links-row a {
+    color: #ffffff;
+    text-shadow: none;
+}
+
 .hero-header.scrolled .nav-pill-main {
     background: transparent;
     /* Blends into the white header bar */
@@ -180,6 +192,11 @@
     padding: 0 60px;
     /* Increased padding */
     justify-content: space-between;
+}
+
+/* Adjust internal mode dropdowns */
+.hero-header.header-internal .dropdown-floating {
+    background: var(--human-navy);
 }
 
 /* Logo placement */

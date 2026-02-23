@@ -1,14 +1,11 @@
 window.initializeNavbar = function () {
     const header = document.getElementById('main-header');
     if (header) {
-        window.removeEventListener('scroll', window._navbarScrollHandler);
-        window._navbarScrollHandler = () => {
-            if (window.scrollY > 40) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        };
+        // High contrast for internal pages
+        if (document.querySelector('.internal-hero')) {
+            header.classList.add('header-internal');
+        }
+
         window.addEventListener('scroll', window._navbarScrollHandler);
 
         // Mobile Menu Toggle (Premium Version)

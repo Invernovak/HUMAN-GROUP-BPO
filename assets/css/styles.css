@@ -1,8 +1,8 @@
 :root {
     /* Palette: Human Group BPO Corporate */
-    --color-bg-dark: #ffffff;
+    --color-bg-dark: #272f61;
     /* Corporate Navy */
-    --color-bg-darker: #272f61;
+    --color-bg-darker: #1a2042;
     /* Darker Navy */
     --color-accent-lime: #7db753;
     /* Corporate Green */
@@ -14,6 +14,11 @@
     /* Corporate Orange */
     --color-white: #ffffff;
     --color-text-light: #f0f4f8;
+
+    /* Aliases for better semantics across components */
+    --human-navy: var(--color-bg-dark);
+    --human-green: var(--color-accent-lime);
+    --human-orange: var(--color-accent-orange);
 
     /* Cards */
     --card-bg: rgba(255, 255, 255, 0.05);
@@ -128,6 +133,30 @@ ul {
 
 .section-corporate h2 {
     color: white;
+}
+
+/* Global Components */
+.badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.dot-green {
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-accent-lime);
+    border-radius: 50%;
 }
 
 .section-corporate .badge-pill {
@@ -913,4 +942,61 @@ ul {
     .section-title {
         font-size: 1.75rem;
     }
+}
+
+/* --- Internal Page Heroes --- */
+.internal-hero {
+    padding: 160px 0 80px;
+    background: #ffffff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid #f8fafc;
+}
+
+.internal-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    color: var(--human-navy);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+/* Watermark removed as it was perceived as 'weird' by user */
+.internal-hero::before {
+    display: none;
+}
+
+.internal-hero .breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: #888;
+    position: relative;
+    z-index: 2;
+}
+
+.internal-hero .breadcrumb a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.internal-hero .breadcrumb span.separator {
+    font-size: 0.7rem;
+    opacity: 0.4;
+}
+
+.internal-hero .breadcrumb a:hover {
+    color: var(--human-green);
+}
+
+.internal-hero .breadcrumb .current {
+    color: var(--human-navy);
+    font-weight: 700;
 }

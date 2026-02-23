@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiénes Somos | Human Group BPO</title>
+    <meta name="description"
+        content="Conozca la historia, misión y visión de Human Group BPO. Expertos en B2H y soluciones estratégicas de outsourcing.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sobre Nosotros | Human Group BPO">
+    <meta property="og:description" content="Nuestra trayectoria y propósito como aliados estratégicos de su empresa.">
+    <meta property="og:image" content="https://humangroupbpo.com/assets/images/logo-horizontal.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +39,7 @@
 
         .narrative-hero {
             padding: 180px 0 100px;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/human-bg-manifesto.jpg') center/cover;
+            background: linear-gradient(135deg, rgba(26, 32, 66, 0.9), rgba(39, 47, 97, 0.8)), url('assets/images/human-bg-manifesto.jpg') center/cover;
             color: white;
             text-align: center;
             position: relative;
@@ -42,6 +52,12 @@
             margin: 0 auto 25px;
             line-height: 1.1;
             font-weight: 800;
+            color: #ffffff;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .text-accent {
+            color: var(--human-green);
         }
 
         .narrative-hero p {
@@ -55,7 +71,7 @@
         /* History Section */
         .history-section {
             padding: 100px 0;
-            background: white;
+            background: #ffffff;
         }
 
         .history-grid {
@@ -86,8 +102,11 @@
 
         /* Values Section */
         .values-section {
-            padding: 100px 0;
-            background: #f9fafb;
+            padding: 120px 0;
+            background: #ffeeda;
+            /* Saturated Light Orange */
+            color: var(--human-dark);
+            position: relative;
         }
 
         .values-grid {
@@ -98,15 +117,30 @@
         }
 
         .value-card {
-            background: white;
+            background: #ffffff;
             padding: 45px;
             border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-            transition: transform 0.3s;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 10px 30px rgba(231, 152, 60, 0.05);
+            transition: all 0.3s;
+        }
+
+        .value-card h3 {
+            color: var(--human-dark);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         .value-card:hover {
             transform: translateY(-10px);
+            border-color: var(--human-orange);
+            box-shadow: 0 20px 40px rgba(231, 152, 60, 0.1);
         }
 
         .value-icon {
@@ -136,7 +170,7 @@
         /* Purpose Section */
         .purpose-section {
             padding: 100px 0;
-            background: var(--human-dark);
+            background: var(--color-bg-darker);
             color: white;
         }
 
@@ -171,8 +205,10 @@
 
         /* Cierre CTA */
         .cierre-section {
-            padding: 100px 0;
+            padding: 120px 0;
             text-align: center;
+            background-color: #f7faf3;
+            /* Very light Green tint */
         }
 
         .cierre-text {
@@ -224,7 +260,7 @@
     <div class="top-bar">
         <div class="container top-bar-content">
             <div class="contact-group">
-                <div class="contact-item"><i class="fas fa-map-marker-alt icon-teal"></i><span>Bogotá, Colombia</span>
+                <div class="contact-item"><i class="fas fa-map-marker-alt icon-teal"></i><span>Cali, Colombia</span>
                 </div>
                 <div class="contact-item"><i class="fas fa-envelope icon-teal"></i><span>info@humangroupbpo.com</span>
                 </div>
@@ -241,10 +277,10 @@
     <!-- Premium Navbar Container -->
     <div id="navbar-container"></div>
 
-    <!-- Section 1: El Manifiesto (Hero) -->
     <header class="narrative-hero">
         <div class="container animate-on-scroll">
-            <h1>"Creemos que el éxito no son solo números, son personas."</h1>
+            <h1>"Creemos que el <span class="text-accent">éxito</span> no son solo números, son <span
+                    class="text-accent">personas</span>."</h1>
             <p>No somos un software, ni un proceso automático. Somos el equipo que cuida a tu equipo. Con más de 7 años
                 de experiencia, transformamos la gestión humana en el motor que impulsa tu tranquilidad.</p>
         </div>

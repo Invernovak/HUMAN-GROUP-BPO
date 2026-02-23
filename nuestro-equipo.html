@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestro Equipo | Human Group BPO</title>
+    <meta name="description"
+        content="Conozca a los líderes y especialistas que transforman la gestión humana en Human Group BPO. Talento con propósito.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nuestro Equipo | Human Group BPO">
+    <meta property="og:description" content="Pasión y experiencia al servicio de su capital humano.">
+    <meta property="og:image" content="https://humangroupbpo.com/assets/images/paola-garcia-founder.jpg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,14 +53,16 @@
         }
 
         .team-intro h2 {
-            font-size: 2.8rem;
+            font-size: clamp(2rem, 5vw, 2.8rem);
             margin-bottom: 25px;
+            color: var(--human-navy);
+            font-weight: 800;
         }
 
         .team-intro p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             line-height: 1.8;
-            color: #666;
+            color: #555;
         }
 
         /* Team Grid */
@@ -177,7 +189,7 @@
             <div class="contact-group">
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt icon-teal"></i>
-                    <span>Bogotá, Colombia</span>
+                    <span>Cali, Colombia</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope icon-teal"></i>
@@ -200,15 +212,15 @@
     <div id="navbar-container"></div>
 
     <!-- Internal Hero -->
-    <section class="internal-hero">
-        <div class="container">
+    <section class="internal-hero" data-watermark="EQUIPO">
+        <div class="container" style="max-width: 1000px;">
             <h1>Nuestro Equipo</h1>
             <div class="breadcrumb">
                 <a href="index.html">Inicio</a>
-                <span>/</span>
-                <span>Sobre Nosotros</span>
-                <span>/</span>
-                <span>Nuestro Equipo</span>
+                <span class="separator">/</span>
+                <a href="quienes-somos.html">Sobre Nosotros</a>
+                <span class="separator">/</span>
+                <span class="current">Nuestro Equipo</span>
             </div>
         </div>
     </section>
@@ -241,11 +253,11 @@
                     </div>
                 </div>
 
-                <!-- Member 2: Placeholder for Manager -->
+                <!-- Member 2: Director Operaciones -->
                 <div class="team-card animate-on-scroll delay-1">
                     <div class="member-photo-container">
                         <div class="member-mask">
-                            <img src="assets/images/placeholder-team-1.jpg" alt="Director de Operaciones">
+                            <img src="assets/images/director-operaciones.jpg" alt="Director de Operaciones">
                         </div>
                     </div>
                     <div class="member-info">
@@ -257,11 +269,11 @@
                     </div>
                 </div>
 
-                <!-- Member 3: Placeholder for Talento -->
+                <!-- Member 3: Lider Talento -->
                 <div class="team-card animate-on-scroll delay-2">
                     <div class="member-photo-container">
                         <div class="member-mask">
-                            <img src="assets/images/placeholder-team-2.jpg" alt="Líder de Talento Humano">
+                            <img src="assets/images/lider-talento.jpg" alt="Líder de Talento Humano">
                         </div>
                     </div>
                     <div class="member-info">
