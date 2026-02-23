@@ -185,15 +185,16 @@
 /* Logo placement */
 .logo-fixed {
     background: white;
-    padding: 8px 15px;
+    padding: 12px 25px;
     border-radius: 50px;
-    height: 48px;
+    height: 80px;
     display: flex;
     align-items: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 .logo-fixed img {
-    height: 32px;
+    height: 56px;
 }
 
 .hero-header.scrolled .logo-fixed {
