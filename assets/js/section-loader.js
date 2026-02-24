@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', async function () {
     const sections = [
-        { id: 'navbar-container', file: 'sections/navbar.html' },
-        { id: 'hero-container', file: 'sections/hero.html' },
-        { id: 'clients-container', file: 'sections/clients.html' },
-        { id: 'about-container', file: 'sections/about.html' },
-        { id: 'who-we-are-container', file: 'sections/who-we-are.html' },
-        { id: 'services-container', file: 'sections/services.html' },
-        { id: 'process-container', file: 'sections/process.html' },
-        { id: 'contact-container', file: 'sections/contact.html' },
-        { id: 'blog-container', file: 'sections/blog.html' },
-        { id: 'testimonials-container', file: 'sections/testimonials.html' },
-        { id: 'footer-container', file: 'sections/footer.html' }
+        { id: 'navbar-container', file: '/sections/navbar.html' },
+        { id: 'hero-container', file: '/sections/hero.html' },
+        { id: 'clients-container', file: '/sections/clients.html' },
+        { id: 'about-container', file: '/sections/about.html' },
+        { id: 'who-we-are-container', file: '/sections/who-we-are.html' },
+        { id: 'services-container', file: '/sections/services.html' },
+        { id: 'process-container', file: '/sections/process.html' },
+        { id: 'contact-container', file: '/sections/contact.html' },
+        { id: 'blog-container', file: '/sections/blog.html' },
+        { id: 'testimonials-container', file: '/sections/testimonials.html' },
+        { id: 'footer-container', file: '/sections/footer.html' }
     ];
 
     for (const section of sections) {
