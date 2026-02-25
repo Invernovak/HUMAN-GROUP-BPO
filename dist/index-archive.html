@@ -26,8 +26,9 @@
     <!-- Custom CSS -->
     <!-- Custom CSS -->
     <!-- Custom CSS -->
-  <script type="module" crossorigin src="/assets/main-CbI740F-.js"></script>
-  <script type="module" crossorigin src="/assets/section-loader--HEtoSsG.js"></script>
+  <script type="module" crossorigin src="/assets/index_archive-D9vgrXmj.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-CbI740F-.js">
+  <link rel="modulepreload" crossorigin href="/assets/section-loader--HEtoSsG.js">
   <link rel="stylesheet" crossorigin href="/assets/main-CIm2IDxL.css">
   <link rel="stylesheet" crossorigin href="/assets/testimonials-CrYtaGNa.css">
   <link rel="stylesheet" crossorigin href="/assets/about-CzoJtsvU.css">
@@ -122,22 +123,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        // Accordion Logic
-        document.querySelectorAll('.accordion-header').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                button.classList.toggle('active');
-                if (button.classList.contains('active')) {
-                    content.style.display = 'block';
-                    button.querySelector('.icon').textContent = '-';
-                } else {
-                    content.style.display = 'none';
-                    button.querySelector('.icon').textContent = '+';
-                }
-            });
-        });
-    </script>
+    
 </body>
 
 </html>

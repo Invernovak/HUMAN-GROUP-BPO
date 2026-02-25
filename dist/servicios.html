@@ -33,7 +33,7 @@
         /* Shared animations or other specific styles can remain here if they don't conflict */
     </style>
 
-  <script type="module" crossorigin src="/assets/servicios-tzdgq933.js"></script>
+  <script type="module" crossorigin src="/assets/servicios-TYlsSpg6.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/main-CbI740F-.js">
   <link rel="stylesheet" crossorigin href="/assets/main-CIm2IDxL.css">
   <link rel="stylesheet" crossorigin href="/assets/servicios-BXpRTwjB.css">
@@ -364,25 +364,7 @@
     <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
-    <script>
-        // Inject shared sections
-        const sharedSections = [
-            { id: 'navbar-container', file: '/sections/navbar.html' },
-            { id: 'footer-placeholder', file: '/sections/footer.html' }
-        ];
-
-        sharedSections.forEach(section => {
-            fetch(section.file)
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById(section.id).innerHTML = html;
-                    // Trigger global initializations if they exist
-                    if (section.id === 'navbar-container' && window.initializeNavbar) {
-                        window.initializeNavbar();
-                    }
-                });
-        });
-    </script>
+    
 </body>
 
 </html>

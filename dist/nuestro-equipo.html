@@ -175,7 +175,8 @@
             }
         }
     </style>
-  <script type="module" crossorigin src="/assets/main-CbI740F-.js"></script>
+  <script type="module" crossorigin src="/assets/nuestro_equipo-NUm5NGTf.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-CbI740F-.js">
   <link rel="stylesheet" crossorigin href="/assets/main-CIm2IDxL.css">
   <link rel="stylesheet" crossorigin href="/assets/about-CzoJtsvU.css">
 </head>
@@ -292,36 +293,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        // Inject shared sections
-        const sections = [
-            { id: 'navbar-container', file: '/sections/navbar.html' },
-            { id: 'about-container', file: '/sections/about.html' },
-            { id: 'footer-container', file: '/sections/footer.html' }
-        ];
-
-        async function loadSections() {
-            for (const section of sections) {
-                try {
-                    const response = await fetch(section.file);
-                    if (response.ok) {
-                        const html = await response.text();
-                        document.getElementById(section.id).innerHTML = html;
-
-                        // Specialized initializations
-                        if (section.id === 'navbar-container' && window.initializeNavbar) {
-                            window.initializeNavbar();
-                        }
-                        if (section.id === 'about-container' && window.initializeSlider) {
-                            window.initializeSlider();
-                        }
-                    }
-                } catch (e) { console.error(e); }
-            }
-        }
-
-        loadSections();
-    </script>
+    
 </body>
 
 </html>

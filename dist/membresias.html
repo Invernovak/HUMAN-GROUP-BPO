@@ -134,7 +134,8 @@
             }
         }
     </style>
-  <script type="module" crossorigin src="/assets/main-CbI740F-.js"></script>
+  <script type="module" crossorigin src="/assets/membresias-DGfU043x.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-CbI740F-.js">
   <link rel="stylesheet" crossorigin href="/assets/main-CIm2IDxL.css">
 </head>
 
@@ -230,28 +231,7 @@
     <div id="footer-container"></div>
 
     <!-- Scripts -->
-    <script>
-        const sections = [
-            { id: 'navbar-container', file: '/sections/navbar.html' },
-            { id: 'footer-container', file: '/sections/footer.html' }
-        ];
-
-        async function loadSections() {
-            for (const section of sections) {
-                try {
-                    const response = await fetch(section.file);
-                    if (response.ok) {
-                        const html = await response.text();
-                        document.getElementById(section.id).innerHTML = html;
-                        if (section.id === 'navbar-container' && window.initializeNavbar) window.initializeNavbar();
-                    }
-                } catch (e) { console.error(e); }
-            }
-            if (window.initializeObservers) window.initializeObservers();
-        }
-
-        loadSections();
-    </script>
+    
 </body>
 
 </html>
