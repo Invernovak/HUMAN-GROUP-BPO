@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Human Group BPO - Actualidad en Gestión Humana</title>
+    <title>Contacto | Human Group BPO - Hablemos de su Futuro</title>
     <meta name="description"
-        content="Artículos y noticias sobre el mundo del BPO, nómina y tendencias en talento humano.">
+        content="Póngase en contacto con nuestros expertos en gestión humana y BPO. Estamos listos para potenciar su equipo.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Blog Corporativo | Human Group BPO">
-    <meta property="og:description" content="Tendencias y consejos para la gestión de su capital humano.">
+    <meta property="og:title" content="Contacto | Human Group BPO">
+    <meta property="og:description" content="¿Listo para optimizar su talento humano? Contáctenos hoy.">
     <meta property="og:image" content="https://humangroupbpo.com/assets/images/logo-horizontal.png">
 
     <!-- Google Fonts -->
@@ -26,16 +26,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/sections/blog.css">
-    <link rel="stylesheet" href="/assets/css/sections/navbar.css">
-    <link rel="stylesheet" href="/assets/css/sections/footer.css">
-    <link rel="stylesheet" href="/assets/css/animations.css">
 
     <style>
-        /* Blog specific styles */
-    </style>
+        /* Success State Toggle */
+        .form-success-overlay {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
 
+        .form-success-overlay.active {
+            display: block;
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/main-CbI740F-.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-CIm2IDxL.css">
+  <link rel="stylesheet" crossorigin href="/assets/contact-Boncoebt.css">
 </head>
 
 <body>
@@ -61,31 +67,29 @@
     <div id="navbar-container"></div>
 
     <!-- Internal Hero -->
-    <section class="internal-hero">
-        <div class="container">
-            <h1>Nuestro Blog</h1>
+    <section class="internal-hero" data-watermark="SOPORTE">
+        <div class="container" style="max-width: 1000px;">
+            <h1>Contacto</h1>
             <div class="breadcrumb">
                 <a href="index.html">Inicio</a>
-                <span>/</span>
-                <span>Blog Informativo</span>
+                <span class="separator">/</span>
+                <span class="current">Hablemos de su equipo</span>
             </div>
         </div>
     </section>
 
-    <!-- Blog Content -->
-    <main class="blog-page-padding">
-        <div id="blog-container"></div>
-    </main>
+    <!-- Content Area: Actual Contact Section -->
+    <div id="contact-container"></div>
 
     <!-- Footer Container -->
     <div id="footer-container"></div>
 
     <!-- Scripts -->
-    <script src="/assets/js/main.js" type="module"></script>
     <script>
+        // Inject shared sections
         const sections = [
             { id: 'navbar-container', file: '/sections/navbar.html' },
-            { id: 'blog-container', file: '/sections/blog.html' },
+            { id: 'contact-container', file: '/sections/contact.html' },
             { id: 'footer-container', file: '/sections/footer.html' }
         ];
 
@@ -96,8 +100,14 @@
                     if (response.ok) {
                         const html = await response.text();
                         document.getElementById(section.id).innerHTML = html;
-                        if (section.id === 'navbar-container' && window.initializeNavbar) window.initializeNavbar();
-                        if (section.id === 'blog-container' && window.initializeObservers) window.initializeObservers();
+
+                        // Specialized initializations
+                        if (section.id === 'navbar-container' && window.initializeNavbar) {
+                            window.initializeNavbar();
+                        }
+                        if (section.id === 'contact-container' && window.initializeObservers) {
+                            window.initializeObservers();
+                        }
                     }
                 } catch (e) { console.error(e); }
             }

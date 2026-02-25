@@ -1,0 +1,52 @@
+<section id="testimonials" class="testimonials-section animate-on-scroll">
+    <div class="testimonials-background">
+        <!-- Background image handled in CSS -->
+    </div>
+
+    <div class="container testimonials-container">
+
+        <!-- Floating Testimonial Card -->
+        <div class="testimonial-card-wrapper animate-on-scroll animate-from-right animate-float">
+            <div class="testimonial-card glass-container">
+                <div class="testimonial-content-slider">
+                    <!-- Dynamic Content will be injected here -->
+                    <div class="testimonial-slide active" id="testimonial-active">
+                        <h3 class="testimonial-heading">Altamente profesional.</h3>
+                        <p class="testimonial-text">
+                            Somos una firma de capital de crecimiento que impulsa a una nueva generación de visionarios
+                            extraordinarios. Impulsamos marcas y soluciones tecnológicas que hacen nuestras vidas más
+                            saludables, felices y cómodas.
+                        </p>
+
+                        <div class="testimonial-user">
+                            <div class="user-avatar">
+                                <img src="/assets/images/testimonial-profile.jpg" alt="Usuario">
+                            </div>
+                            <div class="user-info">
+                                <h4 class="user-name">Martín Bailey</h4>
+                                <span class="user-role">DIRECTOR DE FINANZAS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls (The "floating" tab) -->
+                <div class="testimonial-controls">
+                    <button class="nav-btn prev-btn" onclick="changeTestimonial(-1)" aria-label="Anterior">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button class="nav-btn next-btn" onclick="changeTestimonial(1)" aria-label="Siguiente">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

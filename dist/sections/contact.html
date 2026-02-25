@@ -1,0 +1,121 @@
+<section id="contact" class="section-padding bg-light">
+    <div class="container">
+        <div class="contact-premium-wrapper">
+            <!-- Left Column: Branding & Info -->
+            <div class="contact-info-col animate-on-scroll animate-from-left">
+                <div class="badge-pill mb-20">
+                    <span class="dot-green"></span> HABLEMOS DE SU FUTURO
+                </div>
+                <h2 class="contact-main-title">
+                    ¿Listo para optimizar su <span class="text-gradient">talento humano?</span>
+                </h2>
+                <p class="contact-subtitle">
+                    Estamos aquí para transformar la gestión de su empresa. Contáctenos hoy mismo y descubra cómo
+                    podemos potenciar su equipo.
+                </p>
+
+                <div class="contact-methods">
+                    <div class="contact-method-item">
+                        <div class="method-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="method-text">
+                            <span>Email Corporativo</span>
+                            <strong>info@humangroupbpo.com</strong>
+                        </div>
+                    </div>
+
+                    <div class="contact-method-item">
+                        <div class="method-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="method-text">
+                            <span>Teléfono</span>
+                            <strong>+57 300 123 4567</strong>
+                        </div>
+                    </div>
+
+                    <div class="contact-method-item">
+                        <div class="method-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="method-text">
+                            <span>Sede Cali, Colombia</span>
+                            <strong>Calle 5 # 38 - 14, Edificio Imbanaco</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Lead Capture Form -->
+            <div class="contact-form-col animate-on-scroll animate-from-right">
+                <div id="form-feedback" class="form-success-overlay">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>¡Mensaje Recibido!</h3>
+                    <p>Gracias por confiar en nosotros. Un consultor experto se pondrá en contacto con su equipo en
+                        menos de 24 horas.</p>
+                    <button onclick="resetForm()" class="btn-submit-cro"
+                        style="margin-top: 20px; background: var(--human-green);">Enviar otro mensaje</button>
+                </div>
+
+                <form id="humanContactForm" class="cro-contact-form">
+                    <div class="form-group">
+                        <label for="full-name">Nombre Completo</label>
+                        <input type="text" id="full-name" name="entry.NAME_ID" placeholder="Ej: Juan Pérez" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="corp-email">Correo Corporativo</label>
+                        <input type="email" id="corp-email" name="entry.EMAIL_ID" placeholder="juan.perez@empresa.com"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Empresa</label>
+                        <input type="text" id="company" name="entry.COMPANY_ID" placeholder="Nombre de su organización"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service-interest">¿En qué servicio está interesado?</label>
+                        <textarea id="service-interest" name="entry.MESSAGE_ID"
+                            placeholder="Describa brevemente su requerimiento..." rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit-cro">
+                        Enviar Solicitud de Consultoría <i class="fas fa-paper-plane ml-10"></i>
+                    </button>
+                </form>
+
+                <!-- Hidden iframe for silent Google Form submission -->
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+                <script>
+                    const form = document.getElementById('humanContactForm');
+                    const feedback = document.getElementById('form-feedback');
+
+                    form.addEventListener('submit', function (e) {
+                        // This will be updated with the actual Google Form action URL
+                        // form.action = "https://docs.google.com/forms/u/0/d/e/FORM_ID/formResponse";
+                        // form.target = "hidden_iframe";
+
+                        // For now, we simulate the success state
+                        e.preventDefault();
+                        form.style.display = 'none';
+                        feedback.classList.add('active');
+
+                        console.log("Formulario listo para enviar a Google Forms. Esperando URL de destino.");
+                    });
+
+                    function resetForm() {
+                        form.reset();
+                        form.style.display = 'block';
+                        feedback.classList.remove('active');
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</section>

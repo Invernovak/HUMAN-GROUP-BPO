@@ -61,7 +61,7 @@
     /* Background Image + Black Gradient Overlay */
     background:
         linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.1) 100%),
-        url('../../images/Grupo-trabajando.jpg') no-repeat center center/cover;
+        url('/assets/images/Grupo-trabajando.jpg') no-repeat center center/cover;
 }
 
 /* --- Absolute Header --- */
