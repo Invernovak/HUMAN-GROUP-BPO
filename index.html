@@ -2,12 +2,11 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Human Group BPO | Gestión Humana Estratégica en Colombia</title>
     <meta name="description"
-        content="Especialistas en BPO de Gestión Humana, Nómina, Selección de Personal y Seguridad y Salud en el Trabajo. Soluciones H2H para empresas eficientes.">
-
+        content="Especialistas en BPO de Gestión Humana, Nómina, Selección de Personal y Seguridad y Salud en el Trabajo. Soluciones H2H para empresas eficientes." />
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Human Group BPO | Gestión Humana Estratégica">
     <meta property="og:description"
@@ -15,149 +14,12 @@
     <meta property="og:image" content="https://humangroupbpo.com/assets/images/logo-horizontal.png">
     <meta property="og:url" content="https://humangroupbpo.com">
     <meta property="og:type" content="website">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Outfit:wght@400;700;800&family=Inter:wght@400;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Swiper.js CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- Custom CSS -->
-    <!-- Custom CSS -->
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/animations.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/sections/hero.css">
-    <link rel="stylesheet" href="/assets/css/sections/about.css">
-    <link rel="stylesheet" href="/assets/css/sections/who-we-are.css">
-    <link rel="stylesheet" href="/assets/css/sections/services.css">
-    <link rel="stylesheet" href="/assets/css/sections/process.css">
-    <link rel="stylesheet" href="/assets/css/sections/contact.css">
-    <link rel="stylesheet" href="/assets/css/sections/blog.css">
-    <link rel="stylesheet" href="/assets/css/sections/testimonials.css">
-    <link rel="stylesheet" href="/assets/css/sections/navbar.css">
-    <link rel="stylesheet" href="/assets/css/sections/clients.css">
-    <link rel="stylesheet" href="/assets/css/sections/footer.css">
 </head>
 
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container top-bar-content">
-            <div class="contact-group">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt icon-teal"></i>
-                    <span>Cali, Colombia</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope icon-teal"></i>
-                    <span>info@humangroupbpo.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt icon-teal"></i>
-                    <span>+57 300 123 4567</span>
-                </div>
-            </div>
-            <div class="social-group">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a> <!-- Assuming FontAwesome 6 for X or just twitter -->
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Premium Navbar Container -->
-    <div id="navbar-container"></div>
-
-    <!-- Hero Section Container -->
-    <div id="hero-container">
-        <!-- Hero content will be injected here by assets/js/section-loader.js -->
-    </div>
-
-    <!-- Marquee Section -->
-    <div class="marquee-container">
-        <div class="marquee-content">
-            <span>Driven by People - Powered by Purpose — Driven by People - Powered by Purpose — Driven by People -
-                Powered by Purpose —</span>
-            <span>Driven by People - Powered by Purpose — Driven by People - Powered by Purpose — Driven by People -
-                Powered by Purpose —</span>
-        </div>
-    </div>
-
-    <!-- About Section Container -->
-    <div id="about-container" class="section-white">
-        <!-- About content injected here -->
-    </div>
-
-    <!-- Who We Are Section Container -->
-    <div id="who-we-are-container" class="section-gray">
-        <!-- Who We Are content injected here -->
-    </div>
-
-    <!-- Services Section Container -->
-    <div id="services-container" class="section-white">
-        <!-- Services content injected here -->
-    </div>
-
-    <!-- Process Section Container -->
-    <div id="process-container" class="section-gray">
-        <!-- Process content injected here -->
-    </div>
-
-    <!-- Contact Section Container (New Split) -->
-    <div id="contact-container" class="section-white">
-        <!-- Contact content injected here -->
-    </div>
-
-    <!-- Blog Section Container (New Grid) -->
-    <div id="blog-container" class="section-white">
-        <!-- Blog content injected here -->
-    </div>
-
-    <!-- Testimonials Section Container -->
-    <div id="testimonials-container" class="section-gray">
-        <!-- Testimonials content injected here -->
-    </div>
-
-    <!-- Trusted Clients Section -->
-    <div id="clients-container"></div>
-
-    <!-- Footer Section Container -->
-    <div id="footer-container">
-        <!-- Footer content injected here -->
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/assets/js/section-loader.js" type="module"></script>
-    <script src="/assets/js/main.js" type="module"></script>
-    
-    <script type="module">
-        // Accordion Logic
-        document.querySelectorAll('.accordion-header').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                button.classList.toggle('active');
-                if (button.classList.contains('active')) {
-                    content.style.display = 'block';
-                    button.querySelector('.icon').textContent = '-';
-                } else {
-                    content.style.display = 'none';
-                    button.querySelector('.icon').textContent = '+';
-                }
-            });
-        });
-    </script>
-    <script src="/assets/js/cookie-consent.js"></script>
+    <div id="root"></div>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
 </body>
 
 </html>
-<!-- Finalización de Home: Formulario, Footer y ajustes de marca -->
